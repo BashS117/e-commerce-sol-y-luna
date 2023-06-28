@@ -1,0 +1,55 @@
+{
+    "products": [
+        {"id": 1,
+            "name": "redbull",
+            "category": "hombre",
+
+            "unit_price": 15000,
+            "stock": 5,
+            "image": "https://images.pexels.com/photos/5215469/pexels-photo-5215469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+            "id": 2,
+            "name": "rice",
+            "category": "hombre",
+
+            "unit_price": 15000,
+            "stock": 0,
+            "image": "https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=600"
+         },
+         {
+            "id": 3,
+            "name": "papitas de limón margarita",
+            "category": "mujer",
+
+            "unit_price": 15000,
+            "stock": 1,
+            "image": "https://images.pexels.com/photos/9069287/pexels-photo-9069287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+         },
+         {
+            "id": 4,
+            "name": "meat / pound",
+            "category": "hombre",
+
+            "unit_price": 15000,
+            "stock": 8,
+            "image": "https://images.pexels.com/photos/128401/pexels-photo-128401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {"id": 5,
+            "name": "One Million Lucky",
+            "category": "mujer",
+
+            "unit_price": 15000,
+            "stock": 5,
+            "image": "https://images.pexels.com/photos/5215469/pexels-photo-5215469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {"id": 6,
+            "name": "Creed Silver",
+            "category": "hombre",
+
+            "unit_price": 15000,
+            "stock": 5,
+            "image": "https://images.pexels.com/photos/5215469/pexels-photo-5215469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+    ]
+ }
