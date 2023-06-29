@@ -28,6 +28,11 @@ export const PerfumesProvider = ({children})=>{
     const openProductDetail=()=>setisProductDetailOpen(true);
     const closeProductDetail=()=>setisProductDetailOpen(false);
 
+    //CheckOutSideMenu  open/close
+    const [isCheckOutSideMenuOpen,setisCheckOutSideMenuOpen]= useState(false);
+    const openCheckOutSideMenu=()=>setisCheckOutSideMenuOpen(true);
+    const closeCheckOutSideMenu=()=>setisCheckOutSideMenuOpen(false);
+
     //PRODUCT DETAIL -SHOW Product=
     const [productToShow,setProductToShow]=useState({
         "id": "",
@@ -38,7 +43,8 @@ export const PerfumesProvider = ({children})=>{
         "stock": '',
         "image": ""
   
-    })
+    });
+
 
     return(
         <PerfumesContext.Provider value={{
@@ -50,7 +56,10 @@ export const PerfumesProvider = ({children})=>{
             openProductDetail,
             closeProductDetail,
             productToShow,
-            setProductToShow
+            setProductToShow,
+
+            isCheckOutSideMenuOpen,setisCheckOutSideMenuOpen,
+            openCheckOutSideMenu,closeCheckOutSideMenu
             
 
         }}>

@@ -4,6 +4,7 @@ import NotFound from "../NotFound"
 import { PerfumesProvider } from "../../Context"
 import NavBar from "../../components/NavBar"
 import ProductDetail from "../../components/ProductDetail"
+import CheckOutSideMenu from "../../components/CheckOutSideMenu"
 
 import './App.css'
 
@@ -34,6 +35,7 @@ const App=()=> {
         <NavBar />
         <AppRoutes />
         <ProductDetail/>
+        <CheckOutSideMenu/>
 
       </BrowserRouter>
     </PerfumesProvider>

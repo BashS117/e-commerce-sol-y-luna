@@ -5,7 +5,7 @@ import { PerfumesContext } from "../../Context";
 const Card = (data) => {
 
     const { count,setCount,
-        cartProducts, setCartProducts,openProductDetail,setProductToShow } = useContext(PerfumesContext);
+        cartProducts, setCartProducts,openProductDetail,setProductToShow,openCheckOutSideMenu } = useContext(PerfumesContext);
 
         const showingProduct = (ProductDetail)=>{
             openProductDetail();
@@ -22,6 +22,8 @@ const addProductsToCart=(event,productData)=>{
     
     setCartProducts([...cartProducts,productData])
     // openCheckOutSideMenu();
+    openCheckOutSideMenu();
+    
     // closeProductDetail();
 
     
