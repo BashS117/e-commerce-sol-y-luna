@@ -9,8 +9,11 @@ export const PerfumesProvider = ({children})=>{
     //Get Products
     const [perfumes,setPerfumes]=useState(null);
 
-    console.log(perfumes)
+    //
+    const [filteredPerfumes,setFilteredPerfumes]=useState(null);
 
+
+    console.log(perfumes)
     useEffect(()=>{
         setPerfumes(productsData)
     },[])
@@ -45,6 +48,19 @@ export const PerfumesProvider = ({children})=>{
   
     });
 
+    //get products by title/ SearchByTitle
+    const [searchByTitle,setSearchByTitle]=useState(null)
+
+    const filteredPerfumesByTitle=(perfumes,searchByTitle)=>{
+        return perfumes?.products.filter(perfume => perfume.name.toLowerCase().includes(searchByTitle.toLowerCase()))
+
+    }
+    useEffect(()=>{
+        if(searchByTitle)setFilteredPerfumes(filteredPerfumesByTitle(perfumes,searchByTitle))
+    },[perfumes,searchByTitle])
+
+
+
 
     return(
         <PerfumesContext.Provider value={{
@@ -59,7 +75,10 @@ export const PerfumesProvider = ({children})=>{
             setProductToShow,
 
             isCheckOutSideMenuOpen,setisCheckOutSideMenuOpen,
-            openCheckOutSideMenu,closeCheckOutSideMenu
+            openCheckOutSideMenu,closeCheckOutSideMenu,
+
+            searchByTitle,setSearchByTitle,
+            filteredPerfumes
             
 
         }}>
