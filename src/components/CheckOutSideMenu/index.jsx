@@ -11,8 +11,58 @@ import { totalPrice } from '../../utils'
 
 const CheckOutSideMenu = () => {
 
+
+    // const cart = {
+    //     products: [
+    //       { id: 1, name: 'Product 1', quantity: 2 },
+    //       { id: 2, name: 'Product 2', quantity: 3 },
+    //       // ...otros productos
+    //     ],
+    //     // ...otras propiedades del carrito
+    //   };
+      
+    //   const cartJson = JSON.stringify(cart);
+    //   const cartEncoded = encodeURIComponent(cartJson);
+      
+    //   const whatsappUrl = `https://api.whatsapp.com/send?phone=573022968978&text=${cart.products.map((produ)=>produ.name)}valor_total:`;
+
+
+
+  
   const {isCheckOutSideMenuOpen,closeCheckOutSideMenu,cartProducts,setCartProducts,order,setOrder,setSearchByTitle}=useContext(PerfumesContext);
 
+  //PRIMERA FORMA DE ENVIAR PEDIDO
+
+   // const cart = {
+    //     products: [
+    //       { id: 1, name: 'Product 1', quantity: 2 },
+    //       { id: 2, name: 'Product 2', quantity: 3 },
+    //       // ...otros productos
+    //     ],
+    //     // ...otras propiedades del carrito
+    //   };
+      
+    //   const cartJson = JSON.stringify(cart);
+    //   const cartEncoded = encodeURIComponent(cartJson);
+      
+    //   const whatsappUrl = `https://api.whatsapp.com/send?phone=573022968978&text=${cart.products.map((produ)=>produ.name)}valor_total:`;
+
+
+
+    // SEGUNDA FORMA DE ENVIAR PEDIDO
+    // const cart = {
+    //     products: [
+    //       { id: 1, name: 'Product 1', quantity: 2 },
+    //       { id: 2, name: 'Product 2', quantity: 3 },
+    //       // ...otros productos
+    //     ],
+    //     // ...otras propiedades del carrito
+    //   };
+      
+    //   const cartJson = JSON.stringify(cart);
+    //   const cartEncoded = encodeURIComponent(cartJson);
+
+    
   const handleDelete=(id)=>{
     const filteredeProducts= cartProducts.filter(unproducto=>unproducto.id != id)
     setCartProducts(filteredeProducts);
@@ -29,6 +79,21 @@ const CheckOutSideMenu = () => {
     setCartProducts([])
     setSearchByTitle(null)
   }
+  
+
+
+  //Enviado Pedido:
+      
+  const productNames = cartProducts
+  .map((product) => `${product.name} (V/U: ${product.unit_price})`);
+  const productsText = productNames.join(', ');
+
+  
+  
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=573022968978&text=*Productos*: ${productsText}%0A*Valor total:* ${totalPrice(cartProducts)}`;
+
+
+
   
 
     return (
@@ -61,11 +126,11 @@ const CheckOutSideMenu = () => {
           <span className='font-light'>Total:</span>
           <span className='font-medium text-2xl'>${totalPrice(cartProducts)}</span>
         </p>
-        <Link to='/MyOrders/last'>
+        <Link to={whatsappUrl}>
           <button
       className='w-full bg-black py-3 text-white rounded-lg'
        onClick={()=>handleCheckout()}>
-        CheckOut
+        CheckOut 
       </button>
         </Link>
       

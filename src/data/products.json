@@ -1,7 +1,7 @@
 {
     "products": [
         {"id": 1,
-            "name": "redbull",
+            "name": "Lacoste Red",
             "category": "hombre",
 
             "unit_price": 15000,
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "name": "rice",
+            "name": "Lacoste Blanc",
             "category": "hombre",
 
             "unit_price": 15000,
@@ -19,8 +19,8 @@
          },
          {
             "id": 3,
-            "name": "papitas de limón margarita",
-            "category": "mujer",
+            "name": "Black XS l'excès",
+            "category": "hombre",
 
             "unit_price": 15000,
             "stock": 1,
@@ -28,7 +28,7 @@
          },
          {
             "id": 4,
-            "name": "meat / pound",
+            "name": "Toy Boy",
             "category": "hombre",
 
             "unit_price": 15000,
@@ -37,14 +37,14 @@
         },
         {"id": 5,
             "name": "One Million Lucky",
-            "category": "mujer",
+            "category": "hombre",
 
             "unit_price": 15000,
             "stock": 5,
             "image": "https://images.pexels.com/photos/5215469/pexels-photo-5215469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         {"id": 6,
-            "name": "Creed Silver",
+            "name": "Creed Silver Mountain",
             "category": "hombre",
 
             "unit_price": 15000,
