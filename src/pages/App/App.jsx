@@ -13,6 +13,7 @@ const AppRoutes=()=>{
     {path: '/', element :<Home/>},
     {path: '/Hombres', element :<Home/>},
     {path: '/Mujeres', element :<Home/>},
+    {path: '/Others', element :<Home/>},
 
     // {path:'/MyAccount',element: <MyAccount/>},
     // {path:'/MyOrder',element: <MyOrder/>},

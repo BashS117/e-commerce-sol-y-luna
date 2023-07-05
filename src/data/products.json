@@ -20,7 +20,7 @@
          {
             "id": 3,
             "name": "Black XS l'excès",
-            "category": "hombre",
+            "category": "mujer",
 
             "unit_price": 15000,
             "stock": 1,
@@ -29,7 +29,7 @@
          {
             "id": 4,
             "name": "Toy Boy",
-            "category": "hombre",
+            "category": "mujer",
 
             "unit_price": 15000,
             "stock": 8,

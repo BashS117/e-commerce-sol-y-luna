@@ -51,16 +51,46 @@ export const PerfumesProvider = ({children})=>{
     //get products by title/ SearchByTitle
     const [searchByTitle,setSearchByTitle]=useState(null)
 
+     //get products by Category/ SearchByCategory
+     const [searchByCategory,setSearchByCategory]=useState(null)
+
+
     const filteredPerfumesByTitle=(perfumes,searchByTitle)=>{
         return perfumes?.products.filter(perfume => perfume.name.toLowerCase().includes(searchByTitle.toLowerCase()))
+    }
+
+    const filteredPerfumesByCategory=(perfumes,searchByCategory)=>{
+        console.log('perfumnes:', perfumes)
+        return perfumes?.products.filter(perfume => perfume.category.toLowerCase().includes(searchByCategory.toLowerCase()))
+    }
+
+    const filterBy = (searchType,perfumes,searchByTitle,searchByCategory)=>{
+        if(searchType==='BY_TITLE'){
+         return   filteredPerfumesByTitle(perfumes,searchByTitle)
+        }
+        if(searchType==='BY_CATEGORY'){
+         return   filteredPerfumesByCategory(perfumes,searchByCategory)
+        }
+        if(searchType==='BY_TITLE_AND_CATEGORY'){
+         return   filteredPerfumesByCategory(perfumes,searchByCategory).filter(perfume=> perfume.name.toLowerCase().includes(searchByTitle.toLowerCase()))
+        }
+
+        // if(!searchType){
+        //     return perfumes
+        //    }
 
     }
-    useEffect(()=>{
-        if(searchByTitle)setFilteredPerfumes(filteredPerfumesByTitle(perfumes,searchByTitle))
-    },[perfumes,searchByTitle])
+
+    useEffect(() => {
+        if (searchByTitle && searchByCategory) setFilteredPerfumes(filterBy('BY_TITLE_AND_CATEGORY', perfumes, searchByTitle, searchByCategory))
+        if (searchByTitle && !searchByCategory) setFilteredPerfumes(filterBy('BY_TITLE', perfumes, searchByTitle, searchByCategory))
+        if (!searchByTitle && searchByCategory) setFilteredPerfumes(filterBy('BY_CATEGORY', perfumes, searchByTitle, searchByCategory))
+        if (!searchByTitle && !searchByCategory) setFilteredPerfumes(productsData.products)
+       
+    }, [perfumes, searchByTitle, searchByCategory])
 
 
-
+    console.log('filtereder:', filteredPerfumes)
 
     return(
         <PerfumesContext.Provider value={{
@@ -78,7 +108,9 @@ export const PerfumesProvider = ({children})=>{
             openCheckOutSideMenu,closeCheckOutSideMenu,
 
             searchByTitle,setSearchByTitle,
-            filteredPerfumes
+            filteredPerfumes,
+
+            searchByCategory,setSearchByCategory
             
 
         }}>

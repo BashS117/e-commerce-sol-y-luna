@@ -7,8 +7,9 @@ const Home = () => {
     const {perfumes,searchByTitle,setSearchByTitle,filteredPerfumes}=useContext(PerfumesContext); 
 
   const renderView = () => {
-    if (searchByTitle?.length > 0) {
-      if (filteredPerfumes?.length > 0) {
+    
+    
+    if (filteredPerfumes?.length > 0) {
         return (
           filteredPerfumes.map(product => (
             <Card key={product.id} data={product} />
@@ -19,16 +20,21 @@ const Home = () => {
           <div>No tenemos ese perfume</div>
         )
       }
+      
 
-    } else {
-      return (
-        perfumes?.products.map(product => (
-          <Card key={product.id} data={product} />
-        ))
-      )
-    }
 
-  }
+
+    }  
+    
+    
+    // else {
+    //   return (
+    //     perfumes?.products.map(product => (
+    //       <Card key={product.id} data={product} />
+    //     ))
+    //   )
+    // }
+
 
 
   return (<>
@@ -40,7 +46,7 @@ const Home = () => {
     <input 
     className="rounded-lg border-2 border-black w-100 p-4 mb-4 focus:outline-none"
     onChange={(event)=>setSearchByTitle( event.target.value)}
-    type="text" 
+    type="search" 
     placeholder="Busca tu perfume" />
 
 
