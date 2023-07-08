@@ -11,7 +11,7 @@ const NavBar =()=>{
 
 
     return(
-        <nav className="flex w-full justify-between items-center fixed z-10 top-0 py-5 px-8 text-sm font-semibold">
+        <nav className=" bg-[#03001C] flex w-full justify-between items-center fixed z-10 top-0 py-5 px-8 text-sm  font-semibold">
             <ul className="flex items-center gap-3">
                <li className="font-bold text-lg">
                 <NavLink 

@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../../components/Card'
 import { useContext } from 'react'
 import { PerfumesContext } from '../../Context'
+import './home.css'
 
 const Home = () => {
     const {perfumes,searchByTitle,setSearchByTitle,filteredPerfumes}=useContext(PerfumesContext); 
@@ -38,7 +39,7 @@ const Home = () => {
 
 
   return (<>
-    <div className='App bg-cyan-100 text-center'>
+    <div className='App  text-center w-[90vw]'>
     <div className='relative flex w-400 items-center justify-center mb-5'> 
       <h1 className='font-medium text-xl'>Exclusive Perfumes</h1>
     </div>
@@ -50,7 +51,7 @@ const Home = () => {
     placeholder="Busca tu perfume" />
 
 
-      <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg'>
+      <div className='grid-cards '>
           {
       renderView()
       } 

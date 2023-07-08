@@ -11,7 +11,6 @@ const Card = (data) => {
             openProductDetail();
             setProductToShow(ProductDetail);
             // closeCheckOutSideMenu()
-
         }
 
 console.log(data)
@@ -63,12 +62,18 @@ const renderIcon = (id) => {
 
     return (
         <div
-            className='bg-white cursor-pointer w-56 h-60 rounded-lg'
+            className='max-w-xs mx-auto overflow-hidden shadow-xl     bg-white cursor-pointer w-56 h-60 rounded-lg p-3'
             // onClick={() => showProduct(data.data)}
             onClick={()=> showingProduct(data.data)}
         >
             <figure className='relative mb-2 w-full h-4/5'>
-                <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 p-2'>cate{data.name}</span>
+
+                <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 p-2'>
+                    referencia
+                    </span>
+                <span className='absolute bottom-50 left-0 bg-white/60 rounded-lg text-black text-xs m-2 p-2'>
+                    {data.data.category}
+                    </span>
                 <img className='w-full h-full object-cover rounded-lg' src={data.data.image} alt={data.data.name} />
 
                 {renderIcon(data.data.id)}
