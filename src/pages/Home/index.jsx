@@ -39,9 +39,10 @@ const Home = () => {
 
 
   return (<>
-    <div className='App  text-center w-[90vw]'>
-    <div className='relative flex w-400 items-center justify-center mb-5'> 
-      <h1 className='font-medium text-xl'>Exclusive Perfumes</h1>
+    <div className='App  text-center w-[100vw]'>
+    <div className='relative w-400 items-center justify-center mb-5'> 
+      <h1 className='font-medium text-xl'>ESENCIAS DE PERFUMES PARA TODA OCASIÓN</h1>
+      <p>¡Tu aroma te define!</p>
     </div>
 
     <input 
@@ -51,7 +52,7 @@ const Home = () => {
     placeholder="Busca tu perfume" />
 
 
-      <div className='grid-cards '>
+      <div className='grid gap-26 gap-y-5 mt-30 place-content-center grid-cols-2 '>
           {
       renderView()
       } 

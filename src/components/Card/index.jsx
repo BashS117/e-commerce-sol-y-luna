@@ -62,7 +62,7 @@ const renderIcon = (id) => {
 
     return (
         <div
-            className='max-w-xs mx-auto overflow-hidden shadow-xl     bg-white cursor-pointer w-56 h-60 rounded-lg p-3'
+            className='max-w-xs mx-auto overflow-hidden shadow-xl     bg-white cursor-pointer w-40 h-46 rounded-lg p-3'
             // onClick={() => showProduct(data.data)}
             onClick={()=> showingProduct(data.data)}
         >
