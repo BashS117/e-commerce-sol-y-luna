@@ -97,7 +97,7 @@ const CheckOutSideMenu = () => {
   
 
     return (
-    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-80px)] `}>
+    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-130px)] `}>
 
       <div className='flex justify-between items-center p-6'>
         <h2 className='font-medium text-xl'>My Order</h2>
@@ -128,9 +128,9 @@ const CheckOutSideMenu = () => {
         </p>
         <Link to={whatsappUrl}>
           <button
-      className='w-full bg-black py-3 text-white rounded-lg'
+      className='w-full bg-[#25d366] py-3 text-white rounded-lg'
        onClick={()=>handleCheckout()}>
-        CheckOut 
+        Enviar a WhatsApp
       </button>
         </Link>
       
