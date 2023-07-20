@@ -205,6 +205,28 @@
         "unit_price": 15000,
         "stock": 5,
         "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/9b614f175559299.64b61b5d01f4e.jpg"
+    },
+  
+        {"id": 27,
+        "name": "Arena Rosada",
+        "category": "vela",
+        "unit_price": 18000,
+        "stock": 5,
+        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fb3f89175559299.64b8adba382f3.jpg"
+    },
+        {"id": 28,
+        "name": "Limón",
+        "category": "vela",
+        "unit_price": 15000,
+        "stock": 5,
+        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/84760a175559299.64b979f464bc6.png"
+    },
+        {"id": 29,
+        "name": "Coco",
+        "category": "vela",
+        "unit_price": 10000,
+        "stock": 5,
+        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/1df6fd175559299.64b979f463ff9.png"
     }
     ]
  }

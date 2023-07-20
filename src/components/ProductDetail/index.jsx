@@ -8,7 +8,7 @@ const ProductDetail = () => {
   
 
   return (
-    <aside className={`${isProductDetailOpen? 'flex':'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-130px)] `}>
+    <aside className={`${isProductDetailOpen? 'flex':'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-130px)] z-[3] `}>
    
    <div className='flex justify-between items-center p-3'>
     <h2 className='font-medium text-xl'>Detail</h2>

@@ -97,13 +97,16 @@ const CheckOutSideMenu = () => {
   
 
     return (
-    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-130px)] `}>
+    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-130px)] z-[3]`}>
 
-      <div className='flex justify-between items-center p-6'>
-        <h2 className='font-medium text-xl'>My Order</h2>
-        <svg onClick={() => closeCheckOutSideMenu()} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 cursor-pointer">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+      <div className='flex justify-between items-center p-6 border-b-2 border-black'>
+      <svg
+         onClick={() => closeCheckOutSideMenu()}
+         className='w-8'
+         xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+       
+        <h2 className='font-medium text-xl relative right-[30%]'>Tu Pedido</h2>
+       
       </div>
       <div className='px-6 overflow-y-scroll flex-1'>
       {cartProducts.map(product=>(
@@ -121,7 +124,7 @@ const CheckOutSideMenu = () => {
     ))}
       </div>
 
-      <div className='px-6 mb-6'>
+      <div className='px-6 mb-6 border-t-2 border-t-black '>
         <p className='flex justify-between items-center mb-2'> 
           <span className='font-light'>Total:</span>
           <span className='font-medium text-2xl'>${totalPrice(cartProducts)}</span>

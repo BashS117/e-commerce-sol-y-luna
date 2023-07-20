@@ -46,7 +46,7 @@ const Home = () => {
     </div>
 
     <input 
-    className="rounded-lg border-2 border-black w-100 p-4 mb-4 focus:outline-none"
+    className="rounded-lg border-2 border-[#0f0927] w-100 p-2 mb-4 focus:outline-none"
     onChange={(event)=>setSearchByTitle( event.target.value)}
     type="search" 
     placeholder="Busca tu perfume" />
