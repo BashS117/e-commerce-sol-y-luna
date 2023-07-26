@@ -85,12 +85,12 @@ const CheckOutSideMenu = () => {
   //Enviado Pedido:
       
   const productNames = cartProducts
-  .map((product) => `${product.name} (V/U: ${product.unit_price})`);
+  .map((product) => `${product.name} (V/U:  $${product.unit_price})%0A`);
   const productsText = productNames.join(', ');
 
   
   
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=573022968978&text=*Productos*: ${productsText}%0A*Valor total:* ${totalPrice(cartProducts)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=573177400171&text=*¡Nuevo Pedido!*🛵%0A*Productos*: %0A ${productsText}*Valor total:* $${totalPrice(cartProducts)}`;
 
 
 
