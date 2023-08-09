@@ -3,11 +3,9 @@ import Card from '../../components/Card'
 import { useContext } from 'react'
 import { PerfumesContext } from '../../Context'
 import './home.css'
-import { useParams } from 'react-router-dom'
 
 const Home = () => {
     const {perfumes,searchByTitle,setSearchByTitle,filteredPerfumes}=useContext(PerfumesContext); 
- 
 
   const renderView = () => {
     

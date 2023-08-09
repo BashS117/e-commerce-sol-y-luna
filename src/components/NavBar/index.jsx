@@ -77,7 +77,7 @@ const NavBar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : 'text-white'
             }>
-            Velas
+            Velas Aromáticas
           </NavLink>
         </li>
       </ul>
