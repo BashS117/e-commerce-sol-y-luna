@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useContext } from "react"
 import { PerfumesContext } from "../../Context"
+import { useState } from "react"
 
 const NavBar = () => {
 
@@ -10,10 +11,21 @@ const NavBar = () => {
   const activeStyle = 'relative left-1 before:content-[">"] before:mr-1 font-bold text-[#d69511]'
   // const activeStyle = 'underline underline-offset-4'
 
+  const [isOpenMenu,setIsOpenMenu ]=useState(false);
+  const openSideMenu=()=>setIsOpenMenu(true);
+  const closeSideMenu=()=>setIsOpenMenu(false);
+
 
   return (
-    <nav className=" bg-[#0f0927] flex w-full justify-between items-center fixed z-10 top-0 py-5  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
-      <ul className="flex  items-start gap-3 sm:flex-col sm:gap-1 hover:">
+    <nav className=" bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-5  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
+      <div className="w-full flex justify-between">
+<button className="bg-[#0f0927] hidden sm:flex" onClick={openSideMenu}>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+</button>
+     
+      <ul className={`${isOpenMenu?'sm:block':'sm:hidden'} flex  items-start gap-3   sm:flex-col sm:gap-1 `}>
 
 
         <li className="">
@@ -82,16 +94,22 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <ul>
-        <li className="font-bold text-lg">
+
+     <div className="font-bold text-lg">
           <NavLink
             className=' text-[#d69511]'
             to='/'
+            onClick={() => {
+              setSearchByTitle(null)
+              setSearchByCategory()
+
+            }}
           >
             SOL Y LUNA
           </NavLink>
-        </li>
-      </ul>
+    </div>
+
+  
 
 
       <ul className="flex items-center gap-3 sm:hidden">
@@ -126,9 +144,6 @@ const NavBar = () => {
           </NavLink>
         </li>
 
-
-
-
       </ul>
 
       <button
@@ -144,9 +159,15 @@ const NavBar = () => {
           {cartProducts.length}
           {/* {count} */}
         </div>
-
       </button>
-
+      </div>
+      <div className=" w-[100%]">
+      <input 
+    className=" w-[100%] mt-4 rounded-lg border-2 border-[#0f0927] w-100 p-2 mb-4 focus:outline-none"
+    onChange={(event)=>setSearchByTitle( event.target.value)}
+    type="search" 
+    placeholder="Busca tu perfume" />
+      </div>
     </nav>
   )
 }

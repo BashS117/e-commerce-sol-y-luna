@@ -45,11 +45,7 @@ const Home = () => {
       <p>¡Tu aroma te define!</p>
     </div>
 
-    <input 
-    className="rounded-lg border-2 border-[#0f0927] w-100 p-2 mb-4 focus:outline-none"
-    onChange={(event)=>setSearchByTitle( event.target.value)}
-    type="search" 
-    placeholder="Busca tu perfume" />
+   
 
 
       <div className='grid gap-26 gap-y-5 mt-30 place-content-center grid-cols-2 '>
