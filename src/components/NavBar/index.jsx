@@ -5,7 +5,7 @@ import { useState } from "react"
 
 const NavBar = () => {
 
-  const { count, setSearchByCategory, cartProducts, setSearchByTitle, openCheckOutSideMenu } = useContext(PerfumesContext);
+  const { count,closeCheckOutSideMenu, isCheckOutSideMenuOpen, setSearchByCategory, cartProducts, setSearchByTitle, openCheckOutSideMenu } = useContext(PerfumesContext);
 
 
   const activeStyle = 'relative left-1 before:content-[">"] before:mr-1 font-bold text-[#d69511]'
@@ -18,17 +18,33 @@ const NavBar = () => {
 
   return (
     <nav className=" bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-5  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
-      <div className="w-full flex justify-between">
-<button className="bg-[#0f0927] hidden sm:flex" onClick={openSideMenu}>
+      <div className="items-center w-full flex justify-between">
+<button className="bg-[#0f0927] hidden  sm:w-[45px] sm:h-[45px] sm:flex" onClick={openSideMenu}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
+</button> 
+        {/* fondo oscuro al abrir menu o CHECKOUT */}
+     <div
+     onClick={()=>{
+      closeSideMenu()
+      closeCheckOutSideMenu()
+    }}
+      className={`sm:bg-black sm:absolute sm:left-0 sm:top-0 sm:w-[100vw] sm:h-[100vh]  ${isOpenMenu || isCheckOutSideMenuOpen ?'sm:flex':'sm:hidden'} hidden opacity-50   items-start gap-3 sm:flex-col`}></div>
+     <aside  className={`sm:bg-[#E5E0FF] sm:absolute sm:left-0 sm:top-0 sm:w-[70vw] sm:h-[80vh]  ${isOpenMenu?'sm:flex':'sm:hidden'}   items-start  sm:flex-col`}>
+
+{/* boton CERRAR MENU */}
+     <button
+      className="bg-[transparent] sm:mt-1 sm:ml-1 sm:w-[45px] sm:h-[45px] hidden sm:flex"
+      onClick={()=>closeSideMenu()}
+      >
+      <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
 </button>
-     
-      <ul className={`${isOpenMenu?'sm:block':'sm:hidden'} flex  items-start gap-3   sm:flex-col sm:gap-1 `}>
-
-
-        <li className="">
+    
+      <ul className="menu-mobile sm:mt-8 sm:text-[1.2rem]  sm:w-full sm:text-start">
+        <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400 sm:border-t-[1px] sm:border-t-gray-400">
 
           <NavLink
             to='/'
@@ -39,13 +55,13 @@ const NavBar = () => {
 
             }}
             className={({ isActive }) =>
-              isActive ? activeStyle : 'text-white'
+              isActive ? activeStyle : 'text-white sm:text-inherit'
             }>
-            Todo
+            INICIO
           </NavLink>
         </li>
 
-        <li>
+        <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
           <NavLink
             to='/Hombres'
             onClick={() => {
@@ -55,13 +71,13 @@ const NavBar = () => {
             }}
 
             className={({ isActive }) =>
-              isActive ? activeStyle : 'text-white'
+              isActive ? activeStyle : 'text-white sm:text-inherit'
             }>
-            Hombres
+            HOMBRES
           </NavLink>
         </li>
 
-        <li>
+        <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
           <NavLink
             to='/Mujeres'
             onClick={() => {
@@ -71,13 +87,13 @@ const NavBar = () => {
             }}
 
             className={({ isActive }) =>
-              isActive ? activeStyle : 'text-white'
+              isActive ? activeStyle : 'text-white sm:text-inherit'
             }>
-            Mujeres
+            MUJERES
           </NavLink>
         </li>
 
-        <li>
+        <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
           <NavLink
             to='/Others'
             onClick={() => {
@@ -87,12 +103,14 @@ const NavBar = () => {
             }}
 
             className={({ isActive }) =>
-              isActive ? activeStyle : 'text-white'
+              isActive ? activeStyle : 'text-white sm:text-inherit'
             }>
-            Velas Aromáticas
+            VELAS AROMÁTICAS
           </NavLink>
         </li>
       </ul>
+
+      </aside>
 
 
      <div className="font-bold text-lg">
@@ -147,8 +165,11 @@ const NavBar = () => {
       </ul>
 
       <button
-      onClick={() => openCheckOutSideMenu()}
-       class="flex items-center border-none h-[45px] w-[45px] p-2 bg-[#21ae55] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
+      onClick={() => {
+        openCheckOutSideMenu()
+        closeSideMenu()
+      }}
+       class="flex items-center border-none h-[45px] w-[45px] p-2 bg-[#0f0927] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
         <svg
           
           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-9 absolute   top-3 right-7 sm:top-0 sm:right-0 sm:w-full sm:h-full">
