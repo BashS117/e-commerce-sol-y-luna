@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import { useContext } from "react"
 import { PerfumesContext } from "../../Context"
 import { useState } from "react"
+import CheckOutSideMenu from "../CheckOutSideMenu"
 
 const NavBar = () => {
 
@@ -43,7 +44,7 @@ const NavBar = () => {
       </svg>
 </button>
     
-      <ul className="menu-mobile sm:mt-8 sm:text-[1.2rem]  sm:w-full sm:text-start">
+      <ul className="menu-mobile sm:mt-8 sm:text-[1rem] sm:w-full sm:text-start">
         <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400 sm:border-t-[1px] sm:border-t-gray-400">
 
           <NavLink
@@ -181,6 +182,8 @@ const NavBar = () => {
           {/* {count} */}
         </div>
       </button>
+      
+      <CheckOutSideMenu/>
       </div>
       <div className=" w-[100%]">
       <input 
