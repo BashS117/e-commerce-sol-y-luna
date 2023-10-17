@@ -3,6 +3,7 @@ import { useContext } from "react"
 import { PerfumesContext } from "../../Context"
 import { useState } from "react"
 import CheckOutSideMenu from "../CheckOutSideMenu"
+import React from "react"
 
 const NavBar = () => {
 
@@ -18,8 +19,9 @@ const NavBar = () => {
 
 
   return (
-    <nav className=" bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-5  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
-      <div className="items-center w-full flex justify-between">
+  
+    <nav className="sm:max-h-[110px] bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-5  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
+      <div className="sm:max-h-[55px] items-center w-full flex justify-between">
 <button className="bg-[#0f0927] hidden  sm:w-[45px] sm:h-[45px] sm:flex" onClick={openSideMenu}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -44,7 +46,7 @@ const NavBar = () => {
       </svg>
 </button>
     
-      <ul className="menu-mobile sm:mt-8 sm:text-[1rem] sm:w-full sm:text-start">
+      <ul className="menu-mobile sm:mt-8 sm:text-[1rem]   sm:w-full sm:text-start">
         <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400 sm:border-t-[1px] sm:border-t-gray-400">
 
           <NavLink
@@ -114,9 +116,9 @@ const NavBar = () => {
       </aside>
 
 
-     <div className="font-bold text-lg">
+     <div className="font-bold text-lg ">
           <NavLink
-            className=' text-[#d69511]'
+            className='flex justify-center'
             to='/'
             onClick={() => {
               setSearchByTitle(null)
@@ -124,7 +126,7 @@ const NavBar = () => {
 
             }}
           >
-            SOL Y LUNA
+            <img className="sm:max-h-[84px] w-[70%]" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/47f69a177918813.652dc0aac3da7.png" alt="" />
           </NavLink>
     </div>
 
@@ -170,24 +172,26 @@ const NavBar = () => {
         openCheckOutSideMenu()
         closeSideMenu()
       }}
-       class="flex items-center border-none h-[45px] w-[45px] p-2 bg-[#0f0927] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
+       className="flex justify-center items-end border-none h-[50px] w-[55px] p-2 bg-[#0f0927] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
         <svg
           
           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-9 absolute   top-3 right-7 sm:top-0 sm:right-0 sm:w-full sm:h-full">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
         </svg>
 
-        <div className="pr-5 sm:p-0 sm:top-5 sm:right-[18px] absolute z-10">
+        <p
+       className=" ">
           {cartProducts.length}
           {/* {count} */}
-        </div>
+        </p
+      >
       </button>
       
       <CheckOutSideMenu/>
       </div>
       <div className=" w-[100%]">
       <input 
-    className=" w-[100%] mt-4 rounded-lg border-2 border-[#0f0927] w-100 p-2 mb-4 focus:outline-none"
+    className="sm:mt-1 sm:mb-1 w-[100%] mt-4 rounded-lg border-2 border-[#0f0927] w-100 p-2 mb-4 focus:outline-none"
     onChange={(event)=>setSearchByTitle( event.target.value)}
     type="search" 
     placeholder="Busca tu perfume" />

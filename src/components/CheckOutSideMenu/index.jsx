@@ -97,7 +97,7 @@ const CheckOutSideMenu = () => {
   
 
     return (
-    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} bg-[#E5E0FF] flex-col absolute top-0 right-[0px] border  w-[360px] sm:w-[85vw] h-[100vh] z-20`}>
+    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} bg-[#E5E0FF] flex-col absolute top-0 right-[0px] border  w-[360px] sm:w-[85vw] h-[90vh] z-20`}>
 
       <div className='flex justify-between items-center p-6 border-b-2 border-black'>
       <svg

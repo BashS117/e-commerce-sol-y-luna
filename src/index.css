@@ -46,6 +46,9 @@ button {
   transition: border-color 0.25s;
 }
 
+.App{
+  margin-top: calc(0px + navBar height);
+}
 
 @media (prefers-color-scheme: light) {
   :root {
