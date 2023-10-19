@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
   
-    <nav className="sm:max-h-[110px] bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-5  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
+    <nav className="sm:max-h-[110px] bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-2  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
       <div className="sm:max-h-[55px] items-center w-full flex justify-between">
 <button className="bg-[#0f0927] hidden  sm:w-[45px] sm:h-[45px] sm:flex" onClick={openSideMenu}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
@@ -46,7 +46,7 @@ const NavBar = () => {
       </svg>
 </button>
     
-      <ul className="menu-mobile sm:mt-8 sm:text-[1rem]   sm:w-full sm:text-start">
+      <ul className="menu-mobile sm:mt-8 sm:text-[1rem] sm:block   sm:w-full sm:text-start flex  gap-[30px]">
         <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400 sm:border-t-[1px] sm:border-t-gray-400">
 
           <NavLink
@@ -116,7 +116,7 @@ const NavBar = () => {
       </aside>
 
 
-     <div className="font-bold text-lg ">
+     <div className="font-bold text-lg sm:w-[55%] w-[20%] ">
           <NavLink
             className='flex justify-center'
             to='/'
@@ -126,7 +126,7 @@ const NavBar = () => {
 
             }}
           >
-            <img className="sm:max-h-[84px] w-[70%]" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/47f69a177918813.652dc0aac3da7.png" alt="" />
+            <img className="sm:max-h-[84px] " src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/47f69a177918813.652dc0aac3da7.png" alt="" />
           </NavLink>
     </div>
 
@@ -191,7 +191,7 @@ const NavBar = () => {
       </div>
       <div className=" w-[100%]">
       <input 
-    className="sm:mt-1 sm:mb-1 w-[100%] mt-4 rounded-lg border-2 border-[#0f0927] w-100 p-2 mb-4 focus:outline-none"
+    className="sm:mt-1 sm:mb-1 sm:w-[100%] mt-1 rounded-lg border-2 border-[#0f0927] w-100 p-2  focus:outline-none w-[400px]"
     onChange={(event)=>setSearchByTitle( event.target.value)}
     type="search" 
     placeholder="Busca tu perfume" />

@@ -48,7 +48,7 @@ const Home = () => {
    
 
 
-      <div className='grid gap-26 gap-y-5 mt-30 place-content-center grid-cols-2 '>
+      <div className='sm:grid-cols-2 grid gap-26 gap-y-5 mt-30 place-content-center grid-cols-4 '>
           {
       renderView()
       } 
