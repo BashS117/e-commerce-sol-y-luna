@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
   
-    <nav className="sm:max-h-[110px] bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-2  px-8  text-sm  font-semibold sm:py-1 sm:px-2 ">
+    <nav className="sm:max-h-[110px] bg-[#0f0927] flex flex-col w-full   items-center fixed z-10 top-0 py-2  px-20  text-sm  font-semibold sm:py-1 sm:px-2 ">
       <div className="sm:max-h-[55px] items-center w-full flex justify-between">
 <button className="bg-[#0f0927] hidden  sm:w-[45px] sm:h-[45px] sm:flex" onClick={openSideMenu}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
@@ -46,7 +46,7 @@ const NavBar = () => {
       </svg>
 </button>
     
-      <ul className="menu-mobile sm:mt-8 sm:text-[1rem] sm:block   sm:w-full sm:text-start flex  gap-[30px]">
+      <ul className="menu-mobile sm:mt-8 sm:text-[1rem] sm:block   sm:w-full sm:text-start flex  gap-[20px]">
         <li className="sm:pl-2 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400 sm:border-t-[1px] sm:border-t-gray-400">
 
           <NavLink
@@ -133,10 +133,8 @@ const NavBar = () => {
   
 
 
-      <ul className="flex items-center gap-3 sm:hidden">
-        <li className="text-black/60">
-          Deisy Lorena
-        </li>
+      <ul className="nav-rigth flex items-center gap-3 sm:hidden">
+       
 
         <li>
           <NavLink
@@ -164,26 +162,23 @@ const NavBar = () => {
             SignIn
           </NavLink>
         </li>
-
       </ul>
 
       <button
-      onClick={() => {
+        onClick={() => {
         openCheckOutSideMenu()
         closeSideMenu()
-      }}
-       className="flex justify-center items-end border-none h-[50px] w-[55px] p-2 bg-[#0f0927] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
-        <svg
-          
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-9 absolute   top-3 right-7 sm:top-0 sm:right-0 sm:w-full sm:h-full">
+         }}
+        className="  flex items-center justify-center border-none min-h-[50px] min-w-[55px] h-[50px] w-[55px] p-1  bg-[#0f0927] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
+        <svg  
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="relative sm:top-0 sm:right-0 sm:w-full sm:h-full">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
         </svg>
-
-        <p
-       className=" ">
+        <span
+       className="absolute top-6 ">
           {cartProducts.length}
           {/* {count} */}
-        </p
+        </span
       >
       </button>
       

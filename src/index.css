@@ -20,8 +20,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgba(255, 255, 255, 0.87);
   text-decoration: inherit;
+}
+.nav-rigth :hover{
+  color: #d69511;
 }
 
 
@@ -46,9 +49,6 @@ button {
   transition: border-color 0.25s;
 }
 
-.App{
-  margin-top: calc(0px + navBar height);
-}
 
 @media (prefers-color-scheme: light) {
   :root {
