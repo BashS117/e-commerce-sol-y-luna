@@ -41,7 +41,7 @@ const Home = () => {
   return (<>
     <div className='App   text-center w-[100vw] '>
     <div className='relative w-400 items-center justify-center mb-5'> 
-      <h1 className='home-tittle font-medium text-xl'>ESENCIAS DE PERFUMES PARA TODA OCASIÓN</h1>
+      <h1 className='home-title font-medium text-xl'>ESENCIAS DE PERFUMES PARA TODA OCASIÓN</h1>
       <p className='home-subtitle'>¡Tu aroma te define!</p>
     </div>
 
