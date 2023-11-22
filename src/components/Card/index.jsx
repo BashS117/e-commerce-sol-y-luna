@@ -140,8 +140,8 @@ const Card = (data) => {
 
             <figure className='flex relative mb-0.5  w-full h-[65%]'>
 
-                <span className='z-[2] absolute bottom-[-2px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8px] m-0 p-2 py-0.5 leading-[8px]'>
-                    referencia a comparacion con nuestras fragancias
+                <span className='z-[2] absolute bottom-[-2px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
+                    Referencia a comparación con nuestras fragancias
                 </span>
                 <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
                     {data.data.category}
