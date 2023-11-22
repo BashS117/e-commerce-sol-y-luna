@@ -69,4 +69,7 @@ button {
   button {
     background-color: #333333;
   }
+  .home-title, .home-subtitle {
+    color: #E5E0FF;
+  }
 }
