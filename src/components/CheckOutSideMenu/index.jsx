@@ -85,8 +85,8 @@ const CheckOutSideMenu = () => {
   //Enviado Pedido:
       
   const productNames = cartProducts
-  .map((product) => `${product.name} (V/U:  $${product.unit_price})%0A`);
-  const productsText = productNames.join(', ');
+  .map((product) => `${product.name} (V/U:  $${product.unit_price}),%0A`);
+  const productsText = productNames.join(' ');
 
   
   
