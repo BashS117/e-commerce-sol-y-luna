@@ -91,7 +91,7 @@ const Card = (data) => {
             } else {
                 return (
                     <img
-                        className='w-[65%] h-17 absolute right-[-10px]    top-1 object-cover'
+                        className='w-[65%] h-17 absolute right-[-10px] top-2.5 object-cover'
                         src='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6f8ccd175559299.64c071c0ca990.png'
                         alt=''
                     />
