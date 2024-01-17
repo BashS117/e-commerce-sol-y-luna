@@ -120,10 +120,10 @@ const Card = (data) => {
                         className="flex flex-col"
                         // onClick={(event) => stopPropagation(event)}
                     >
-                        <button className={`p-[2px] ${selectedOption === 1 ? 'bg-[#3B82F6]' : " bg-[#e9edf7]/40"} text-[10px] mb-1 rounded-[3px]`}
+                        <button className={`p-[2px] ${selectedOption === 1 ? 'bg-[#3B82F6]' : " bg-[#e9edf7]/90"} shadow-md text-[10px] mb-1 rounded-[3px] `}
                             onClick={(event) => handleOptionChange(event,1)}>30ml </button>
                         <button
-                            className={`p-[2px] ${selectedOption === 2 ? 'bg-[#3B82F6]' : " bg-[#e9edf7]/40"} text-[10px] rounded-[5px]`}
+                            className={`p-[2px] ${selectedOption === 2 ? 'bg-[#3B82F6]' : " bg-[#e9edf7]/90"} shadow-inner text-[10px] rounded-[5px]`}
                             onClick={(event) => handleOptionChange(event,2)}>60ml</button>
                     </div>
                     <p className="px-2">x</p>
