@@ -169,13 +169,12 @@ const NavBar = () => {
         openCheckOutSideMenu()
         closeSideMenu()
          }}
-        className="  flex items-center justify-center border-none min-h-[50px] min-w-[55px] h-[50px] w-[55px] p-1  bg-[#0f0927] hover:bg-[#26eb6e] text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
-        <svg  
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="relative sm:top-0 sm:right-0 sm:w-full sm:h-full text-[#26eb6e]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-        </svg>
+        className="  flex items-center justify-center border-none min-h-[50px] min-w-[55px] h-[50px] w-[55px] p-1  bg-[#0f0927]  text-white font-semibold shadow-md transform hover:scale-105 transition duration-300">
+  
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"  stroke="currentColor"  className="relative sm:top-0 sm:right-1 sm:w-full sm:h-[75%] text-[#26eb6e]">
+          <path fill="#26eb6e" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
         <span
-       className="absolute top-6 ">
+       className="absolute top-2.5 ">
           {cartProducts.length}
           {/* {count} */}
         </span
