@@ -1,4 +1,5 @@
 import { createContext,useState, useEffect, Children } from "react";
+import swal from 'sweetalert2'
 
 export const PerfumesContext = createContext();
 import productsData from '../data/products.json'
@@ -26,6 +27,20 @@ export const PerfumesProvider = ({children})=>{
     const [cartProducts, setCartProducts]=useState([]);
 
 
+    //funcion para mostrar alerta al agregar producto al carrito
+  const mostrarAlert=()=>{
+    swal.fire({
+      text: "Se ha añadido al carrito 🛒👉",
+      icon: "success",
+      toast: true,
+      position: 'top',
+      timer: '3000',
+      showConfirmButton: false,
+      color: '#3B82F6',
+      customClass: 'swal-wide',
+    })
+  }
+
 
     const addProductsToCart = (event, productData,option) => {
         event.stopPropagation();
@@ -42,8 +57,9 @@ export const PerfumesProvider = ({children})=>{
         };
 console.log('modified Product:',modifiedProduct)
         setCartProducts([...cartProducts, modifiedProduct])
-        // openCheckOutSideMenu();
-        openCheckOutSideMenu();
+        // openCheckOutSideMenu(); para abrir el carrito
+        //openCheckOutSideMenu();
+        mostrarAlert();
         // closeProductDetail();
     }
 
