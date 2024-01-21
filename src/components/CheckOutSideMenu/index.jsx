@@ -129,6 +129,7 @@ const CheckOutSideMenu = () => {
           <span className='font-light'>Total:</span>
           <span className='font-medium text-2xl'>${totalPrice(cartProducts)}</span>
         </p>
+        <p>Envía tu pedido y paga al recibir</p>
         <Link to={whatsappUrl}>
           <button
       className='w-full bg-[#25d366] py-3 text-white rounded-lg'
