@@ -116,6 +116,7 @@ const CheckOutSideMenu = () => {
         title={product.name}
         imageUrl={product.image}
         price={product.unit_price}
+        option={product.option}
         handleDelete={handleDelete}
         />
 

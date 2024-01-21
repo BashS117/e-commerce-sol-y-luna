@@ -38,7 +38,12 @@ export const PerfumesProvider = ({children})=>{
             unit_price: priceToAdd,
         }
 
-        setCartProducts([...cartProducts, productToAdd])
+        const modifiedProduct = {
+            ...productData,  // Copia las propiedades existentes de data.data
+            option,  // Añade selectedOption al objeto data.data
+        };
+
+        setCartProducts([...cartProducts, modifiedProduct])
         // openCheckOutSideMenu();
         openCheckOutSideMenu();
         // closeProductDetail();

@@ -1,5 +1,5 @@
 const OrderCard = props => {
-    const {id,title,imageUrl,price,handleDelete}= props
+    const {id,title,imageUrl,price,option,handleDelete}= props
     let renderX
     if (handleDelete ) {
         renderX= <svg 
@@ -9,18 +9,24 @@ const OrderCard = props => {
     }
     
   return (
-    <div className="flex justify-between items-center py-2 border-b-[1px] border-gray-400 ">
+    <div className="flex justify-between items-center gap-2 py-2 border-b-[1px] border-gray-400 ">
         <div className="flex items-center gap-2">
             <figure className="w-20 h-20">
                 <img className="w-full h-full rounded-lg object-cover" src={imageUrl} alt={title} />
             </figure>
-            <p className="text-sm font-light">{title}</p>
+            <p className="text-sm font-bold">{title}</p>
+            {option === 1 ? (
+                        <p className=' font-medium'>30ml</p>
+                    ) : (
+                        <span className=' font-medium'>60ml</span>
+                    )}     
+             <span>x</span>
         </div>
         <div className="flex items-center gap-2">
               <p className="text-lg font-medium">${price}</p>
               
           {renderX}
-          </div>
+        </div>
 
       </div>
   )
