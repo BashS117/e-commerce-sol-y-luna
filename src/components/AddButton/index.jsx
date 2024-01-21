@@ -3,7 +3,6 @@ import { PerfumesContext } from "../../Context";
 
 const AddButton = ({id,data,selectedOption}) => {
     const {cartProducts,addProductsToCart } = useContext(PerfumesContext);
-    console.log('SELECOPTT IN addbutton',selectedOption)
     const isInCart = cartProducts.filter(product => product.id === id).length > 0;
 
     if (isInCart) {
