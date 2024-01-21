@@ -1,12 +1,13 @@
 import React from 'react'
 import { useContext } from 'react'
 import { PerfumesContext } from '../../Context'
+import AddButton from '../AddButton';
 
 const ProductDetail = () => {
 
   const {isProductDetailOpen,closeProductDetail,productToShow}=useContext(PerfumesContext);
   
-
+console.log(productToShow)
   return (
     <aside className={`${isProductDetailOpen? 'flex':'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] sm:w-[85vw] h-[calc(100vh-130px)] z-[3] `}>
    
@@ -27,11 +28,16 @@ const ProductDetail = () => {
     alt={productToShow.name} />
    </figure>
    <p className='flex flex-col p-6'>
-    <span className='font-medium text-2xl mb-2'>${productToShow.unit_price}</span>
-    <span className='font-medium text-md'>${productToShow.name}</span>
+   {productToShow.selectedOption === 1 ? (
+                        <span className='text-lg font-medium'>${productToShow.unit_price}</span>
+                    ) : (
+                        <span className='text-lg font-medium'>$25000</span>
+                    )}    <span className='font-medium text-md'>${productToShow.name}</span>
     {/* <span className='font-light text-sm'>${productToShow.description}</span> */}
 
    </p>
+
+  
 
 
 

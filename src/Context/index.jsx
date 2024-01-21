@@ -26,6 +26,25 @@ export const PerfumesProvider = ({children})=>{
     const [cartProducts, setCartProducts]=useState([]);
 
 
+
+    const addProductsToCart = (event, productData,option) => {
+        event.stopPropagation();
+        setCount(count + 1)
+
+        const priceToAdd =
+            option === 1 ? productData.unit_price : 25000;
+        const productToAdd = {
+            ...productData,
+            unit_price: priceToAdd,
+        }
+
+        setCartProducts([...cartProducts, productToAdd])
+        // openCheckOutSideMenu();
+        openCheckOutSideMenu();
+        // closeProductDetail();
+    }
+
+
     /// PRODUCT DETAIL  -OPEN/CLOSE
     const [isProductDetailOpen,setisProductDetailOpen]=useState(false);
     const openProductDetail=()=>setisProductDetailOpen(true);
@@ -36,17 +55,8 @@ export const PerfumesProvider = ({children})=>{
     const openCheckOutSideMenu=()=>setisCheckOutSideMenuOpen(true);
     const closeCheckOutSideMenu=()=>setisCheckOutSideMenuOpen(false);
 
-    //PRODUCT DETAIL -SHOW Product=
-    const [productToShow,setProductToShow]=useState({
-        "id": "",
-        "name": "",
-        "category": "",
-
-        "unit_price": '',
-        "stock": '',
-        "image": ""
-  
-    });
+    //PRODUCT DETAIL -SHOW Product - se resetea por eso da igual pon erle datos=
+    const [productToShow,setProductToShow]=useState({});
 
     //get products by title/ SearchByTitle
     const [searchByTitle,setSearchByTitle]=useState(null)
@@ -97,6 +107,7 @@ export const PerfumesProvider = ({children})=>{
             perfumes,
             count,setCount,
             cartProducts, setCartProducts,
+            addProductsToCart,
 
             isProductDetailOpen,
             openProductDetail,
