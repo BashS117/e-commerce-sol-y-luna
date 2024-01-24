@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../../components/Card'
 import { useContext } from 'react'
 import { PerfumesContext } from '../../Context'
+import WhatsAppButton from '../../components/WhatsAppButton'
 import './home.css'
 
 const Home = () => {
@@ -53,6 +54,7 @@ const Home = () => {
       renderView()
       } 
       </div>
+      <WhatsAppButton/>
     </div>
     {/* <iframe src="https://whatsform.com/4FQHtz"  width="100%" height="600" frameBorder="0"></iframe> */}
    
