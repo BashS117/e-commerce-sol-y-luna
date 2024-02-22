@@ -9,7 +9,7 @@ const ProductDetail = () => {
   
 console.log(productToShow)
   return (
-    <aside className={`${isProductDetailOpen? 'flex':'hidden'} flex-col fixed right-[20px] border bg-white border-black rounded-lg w-[360px] sm:w-[85vw] h-[calc(100vh-130px)] z-[3] `}>
+    <aside className={`${isProductDetailOpen? 'flex':'hidden'} flex-col fixed right-[34px] border bg-white border-black rounded-lg w-[360px] sm:w-[85vw] z-[3] `}>
    
    <div className='flex justify-between items-center p-3'>
     <h2 className='font-medium text-xl'>Detail</h2>
@@ -32,7 +32,7 @@ console.log(productToShow)
                         <span className='text-lg font-medium'>${productToShow.unit_price}</span>
                     ) : (
                         <span className='text-lg font-medium'>$25000</span>
-                    )}    <span className='font-medium text-md'>${productToShow.name}</span>
+                    )}    <span className=' font-bold text-md'>{productToShow.name}</span>
     {/* <span className='font-light text-sm'>${productToShow.description}</span> */}
 
    </p>
