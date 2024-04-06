@@ -1,6 +1,6 @@
 const Layout = ({ children }) => {
     return (
-        <div className='flex flex-col pt-[15px] sm:pt-0 items-center'>
+        <div className='  sm:pt-0  sm:text-[14px]'>
             {children}
         </div>
     )

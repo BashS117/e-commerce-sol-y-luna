@@ -1,18 +1,38 @@
-import { useRoutes, BrowserRouter } from "react-router-dom"
+import { useRoutes, BrowserRouter, useNavigate } from "react-router-dom"
 import Home from "../Home"
 import NotFound from "../NotFound"
 import { PerfumesProvider } from "../../Context"
 import NavBar from "../../components/NavBar"
-import ProductDetail from "../../components/ProductDetail"
+import Login from "../Login/Login"
 
 import './App.css'
+import AdminProducts from "../../components/AdminProducts"
+import Footer from "../../components/Footer"
+import Checkout from "../Checkout"
+import Pedidos from "../Pedidos"
+import ContactoVentasPorMayor from "../VentasPorMayor"
+import ScrollToTopOnRouteChange from "../../components/ScrollTop"
+import {Toaster} from 'react-hot-toast'
+import Signup from "../Signup"
+import { ProtectedRouteForAdmin } from "../../ProtectedRoute/ProtectedRouteForAdmin"
+import Cuenta from "../Cuenta"
+import ProductDetail from "../../components/ProductDetail"
+import FeedBack from "../FeedBack"
 
 const AppRoutes=()=>{
   let routes=useRoutes([
     {path: '/', element :<Home/>},
-    {path: '/Hombres', element :<Home/>},
-    {path: '/Mujeres', element :<Home/>},
-    {path: '/Others', element :<Home/>},
+    {path: '/Productos', element :<ProtectedRouteForAdmin><AdminProducts/></ProtectedRouteForAdmin>},
+    {path: '/category/:categoryname', element :<Home/>},
+  
+    {path: '/Login', element :<Login/>},
+    {path: '/checkout', element :<Checkout/>},
+    {path: '/pedidos', element :<ProtectedRouteForAdmin><Pedidos/></ProtectedRouteForAdmin>},
+    {path: '/registrarse', element :<Signup/>},
+    {path: '/cuenta', element :<Cuenta/>},
+    {path: '/productdetail/:id', element :<ProductDetail/>},
+    {path: '/feedback', element :<FeedBack/>},
+
 
     // {path:'/MyAccount',element: <MyAccount/>},
     // {path:'/MyOrder',element: <MyOrder/>},
@@ -28,13 +48,17 @@ const AppRoutes=()=>{
 
 const App=()=> {
 
+ 
+
   return (
     <PerfumesProvider>
-
       <BrowserRouter>
+      
         <NavBar />
+        <ScrollToTopOnRouteChange/>
         <AppRoutes />
-        <ProductDetail/>
+        <Toaster/>
+        <Footer/>
 
       </BrowserRouter>
     </PerfumesProvider>

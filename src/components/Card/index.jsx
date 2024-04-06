@@ -3,26 +3,16 @@ import { PerfumesContext } from "../../Context";
 import { useState } from "react";
 import AddButton from "../AddButton";
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const Card = (data) => {
-
     const { count, setCount,
-        cartProducts, setCartProducts, openProductDetail, setProductToShow, openCheckOutSideMenu,addProductsToCart } = useContext(PerfumesContext);
+        cartProducts, setCartProducts, openProductDetail,  openCheckOutSideMenu,addProductsToCart } = useContext(PerfumesContext);
 
-    const showingProduct = (ProductDetail) => {
-       
-        console.log('productDetail', ProductDetail)
-        setProductToShow(ProductDetail);
-        openProductDetail();
-        // closeCheckOutSideMenu()
-    }
+        const navigate = useNavigate();
+  
 
-    // const stopPropagation = (event) => {
-    //     event.stopPropagation();
-    //   };
-    
-
-    console.log(data)
+    console.log('datos DE productos',data.data)
 
    
 
@@ -60,114 +50,68 @@ const Card = (data) => {
     // }
 
 
-    const renderSecondImage = () => {
-        if (data.data.category !== "vela") {
-            if (selectedOption === 1) {
-                return (
-                    <img
-                        className=" w-[45%] h-20 absolute right-2 top-7 object-cover "
-                        src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png" alt="" />
-
-                );
-            } else {
-                return (
-                    <img
-                        className='w-[65%] h-17 absolute right-[-10px] top-2.5 object-cover'
-                        src='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6f8ccd175559299.64c071c0ca990.png'
-                        alt=''
-                    />
-                )
-            }
-
-        }
-        return null;
-    }
 
 
-    const [selectedOption, setSelectedOption] = useState(1);
 
-    const modifiedData = {
-        ...data.data,  // Copia las propiedades existentes de data.data
-        selectedOption,  // Añade selectedOption al objeto data.data
-    };
+    // const [selectedOption, setSelectedOption] = useState(1);
+
+    // const modifiedData = {
+    //     ...data.data,  // Copia las propiedades existentes de data.data
+    //     selectedOption,  // Añade selectedOption al objeto data.data
+    // };
    
 
-    const handleOptionChange = (event,option) => {
-       
-        setSelectedOption(option);
-        event.stopPropagation();
-    };
+    
 
-
-    const renderVolume = () => {
-
-
-        if (data.data.category !== "vela") {
-            return (
-                <div className="flex items-center">
-                    <div
-                        className="flex flex-col"
-                        // onClick={(event) => stopPropagation(event)}
-                    >
-                        <button className={`p-[2px] ${selectedOption === 1 ? 'bg-[#3B82F6]' : " bg-[#e9edf7]/90"} shadow-md text-[10px] mb-1 rounded-[3px] `}
-                            onClick={(event) => handleOptionChange(event,1)}>30ml </button>
-                        <button
-                            className={`p-[2px] ${selectedOption === 2 ? 'bg-[#3B82F6]' : " bg-[#e9edf7]/90"} shadow-inner text-[10px] rounded-[5px]`}
-                            onClick={(event) => handleOptionChange(event,2)}>60ml</button>
-                    </div>
-                    <p className="px-2">x</p>
-                </div>
-            );
-        }
-        return null;
-
-    }
-
+    
 
     return (
         <div
-            className='max-w-xs mx-auto overflow-hidden shadow-xl     bg-white cursor-pointer w-40 h-[235px] rounded-lg p-3'
-            // onClick={() => showProduct(data.data)}
-            onClick={() => showingProduct(modifiedData)}
+            className=' mx-auto   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[13rem] sm:w-[11.5rem]  border border-ligth-gray p-3 '
+            onClick={() => {
+                
+                navigate(`/productdetail/${data.data.id}`)}
+            }
+            // onClick={() => showingProduct(modifiedData)}
         >
 
-            <figure className='flex relative mb-0.5  w-full h-[65%]'>
+            <figure className='flex relative mb-0.5  w-full h-[55%]'>
 
-                <span className='z-[2] absolute bottom-[-2px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
-                    Referencia a comparación con nuestras fragancias
-                </span>
-                <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
+                {/* <span className='z-[2] absolute bottom-[-2px] left-[38px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
+                    Marca o algún detalle  
+                </span> */}
+                {/* <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
                     {data.data.category}
-                </span>
-                <img className=' w-[92px] h-30 object-contain rounded-lg z-[1]' src={data.data.image} alt={data.data.name} />
-                {renderSecondImage()}
-
-
-                <AddButton id={data.data.id}
-                data={data.data}
-                selectedOption={selectedOption}
-                />
+                </span> */}
+                <img className='h-[178px]   w-full rounded-lg z-[1] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`} alt='imagen' />
             </figure>
             {/* <img 
                 className=" w-[30%]  object-cover "
                 src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/30a06d175559299.64b5fc960793a.jpg" alt="" />
                  */}
-            <p className=" text-[#d69511] text-[8px] absolute  ">Inspirado en:</p>
-
-            <p className=" mt-2 mb-2 flex flex-col text-start items-baseline">
-                <span className='text-sm font-semibold pt-1 m-0 leading-3'>{data.data.name}</span>
-                <div className="pt-1 flex items-center">
-                    {renderVolume()}
-
-                    {selectedOption === 1 ? (
-                        <span className='text-lg font-medium'>${data.data.unit_price}</span>
-                    ) : (
-                        <span className='text-lg font-medium'>$25000</span>
-                    )}
-
+         
+            <div className=" mt-2  flex flex-col  items-center">
+                <div className="flex flex-col text-start w-full">
+                   <p className="font-bold text-orange">${data.data.price}</p>
+                   <h1 className='text-[17px] text-black font-bold pt-1 h-[42px]'>{data.data.name}</h1>
                 </div>
+               <AddButton id={data.data.id}
+                data={data.data}
+              
+                />
 
-            </p>
+<div className="flex text-black">  
+       {data.data.quantity>0 ?   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>:<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+</svg>
+}
+       
+         <p className="text-[12px]   mt-1">stock: {data.data.quantity}</p>
+</div>
+
+            </div>
         </div>
 
     )

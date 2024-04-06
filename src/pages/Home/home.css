@@ -12,3 +12,6 @@
     margin-top: 30px;
     place-content: center;
 }
+:global(.active) svg {
+    fill: #FF7315;
+  }

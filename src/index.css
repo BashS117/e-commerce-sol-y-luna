@@ -43,17 +43,85 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 4px;
   
   cursor: pointer;
   transition: border-color 0.25s;
 }
+li{
+  border-left: 1px solid #c4baba;
+  padding-inline: 5PX;
+  align-items: center;
+}
+footer a{
+  color: #191919;
+}
+.categories a {
+  padding-block:8px ;
+  width: 100%;
+  text-align: start;
+  padding-left: 4px;
+  color: #E7EFFF;
+}
+.categories li:hover {
+  background-color:#8CD8EF ;
+  
+}
+.categories a:hover{
+  color: #000;
+}
+.categories li {
+  width: 100%;
+ display: flex;
+ 
+}
+.checkoutOrder button{
+  display: none;
+}
 
+.aside-edit-form input, select{
+  background: #E5E0FF;
+  padding: 10px;
+  border-radius: 4px;
+}
+.aside-edit-form label{
+  font-weight: bold;
+}
+.input-confirm{
+  background: #0CAABA !important;
+}
+.row-pedido p{
+  font-weight: bold;
+}
+.tablepedido-recibido p{
+  border-right: 1px solid orange;
+  
+}
+.menu-desktop p{
+  color: #042642 ;
 
+}
+details{
+  transition: all .3s ease;
+  border: 1px solid  #c4baba;
+}
+
+input{
+  color: #000;
+}
+select{
+  color: #000;
+}
+.form-checkout input{
+  border: 1px solid #c4baba;
+  height: 35px;
+  
+
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #0d1823;
-    background-color: #E5E0FF;
+    background-color: #fff;
   }
   
   button {
@@ -62,12 +130,15 @@ button {
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #0d1823;
+    color: #E5E0FF;
     background-color: #0d1823;
   }
 
   button {
     background-color: #333333;
+  }
+  footer{
+    color: #191919;
   }
   .home-title, .home-subtitle {
     color: #E5E0FF;

@@ -4,7 +4,15 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+  theme: { colors: {
+    'white': '#fff',
+    'blue-ligth': '#8CD8EF',
+    'blue-medium': '#0CAABA',
+    'black': '#042642',
+    'purple': '#EC008E',
+    'gray-footer': '#E5E0FF',
+ 
+  },
     screens: {
       'sm': {'min': '320px', 'max': '767px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
