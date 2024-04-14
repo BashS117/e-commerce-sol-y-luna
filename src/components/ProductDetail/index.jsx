@@ -66,16 +66,27 @@ const goBack = (category) => {
 
   </button>
     <ImageGallery
-      img={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${product.imageUrl}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`}
-      img2={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${product.imageUrl2}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`}
-      img3={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${product.imageUrl3}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`}
+      img={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
+      // img2={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl2}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
+      // img3={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl3 }?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       />
   
   <div className='flex text-start flex-col w-[600px] h-[528px] px-4  pt-20 sm:h-auto sm:w-auto '>
-          <span className='text-lg font-bold text-blue-medium mb-10'>Blue Fashion</span>
-          <h1 className='font-bold text-3xl text-md mb-10'>{product.name}</h1>
-       
-          <span className='text-lg font-bold'>${product.price}</span>
+          <span className='text-lg font-bold text-blue-medium mb-10'>Perfumes Sol y Luna</span>
+          <h1 className='font-bold text-3xl text-md mb-6'>{product.name}</h1>
+          <h1 className='text-[1.2rem] font-bold'>Descripción</h1>
+           <p>{product.description} </p>
+
+          <h1 className='text-[1rem] mt-4 font-bold'>TIPO: INSPIRACIÓN</h1>
+
+          {/* <strong className='mt-2'>Elige el volumen:</strong>
+          <form >
+    <input type="radio" id="volumen30" name="volumen" value="30ml"/>
+    <label for="volumen30">30ml</label>
+    <input type="radio" id="volumen60" name="volumen" value="60ml"/>
+    <label for="volumen60">60ml</label>
+</form> */}
+          <span className='border-t-purple border-t text-lg font-bold'>${product.price}</span>
   
       {/* <span className='font-light text-sm'>${product.description}</span> */}
       <div className='w-[300px] sm:w-full'>
@@ -110,11 +121,10 @@ const goBack = (category) => {
     
   
       </div>
-      <section className='flex justify-start text-start mt-10'>
+      <section className='flex justify-start text-start mt-0'>
         <div className='w-[50%] sm:w-auto flex flex-col gap-2'> 
-           <h1 className='text-[1.2rem] font-bold'>Descripción</h1>
-           <p>{product.description} </p>
-           <p> {`No esperes más y adquiere ${product.name} con las mejores condiciones de envío y al mejor precio. Además en Blue-fashion tienes a tu disposición otros artículos de prendas deportivas de la categoría ${product.category==='suplementos'? 'Ropa o Calzado':`${product.category}`} que pueden complementar tu compra. Adquiere ${product.name} y recíbelo cuanto antes en casa.`}</p>
+           
+           <p> {`No esperes más y adquiere ${product.name} con las mejores condiciones de envío y al mejor precio. Además en Perfumeria Sol y Luna tienes a tu disposición otro tipo de envases para tu perfume que pueden complementar tu compra. Adquiere ${product.name} y recíbelo cuanto antes en casa.`}</p>
         </div>
         {/* <div>  
           <h1 className='text-[1.2rem] font-bold'>Descripción</h1>

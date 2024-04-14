@@ -67,7 +67,7 @@ const Card = (data) => {
 
     return (
         <div
-            className=' mx-auto   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[13rem] sm:w-[11.5rem]  border border-ligth-gray p-3 '
+            className=' mx-auto   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[18rem] sm:w-[11.5rem]  border border-ligth-gray p-3 '
             onClick={() => {
                 
                 navigate(`/productdetail/${data.data.id}`)}
@@ -75,15 +75,17 @@ const Card = (data) => {
             // onClick={() => showingProduct(modifiedData)}
         >
 
-            <figure className='flex relative mb-0.5  w-full h-[55%]'>
+            <figure className='flex  relative mb-0.5 overflow-hidden shadow-xl   w-full h-[55%]'>
 
                 {/* <span className='z-[2] absolute bottom-[-2px] left-[38px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
                     Marca o algún detalle  
                 </span> */}
                 {/* <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
                     {data.data.category}
-                </span> */}
-                <img className='h-[178px]   w-full rounded-lg z-[1] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`} alt='imagen' />
+                </span> */}               
+             <img className='h-[178px]   w-full rounded-lg z-[2] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt='imagen' />
+             <img className='h-[178px] relative right-10 w-full rounded-lg z-[1] object-cover' src={`https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png`} alt='imagen' />
+
             </figure>
             {/* <img 
                 className=" w-[30%]  object-cover "

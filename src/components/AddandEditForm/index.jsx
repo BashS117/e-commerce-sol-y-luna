@@ -156,7 +156,7 @@ if(isOpenAddForm){
   
   return (
     <aside 
-    className={`${isOpenAddForm||isOpenEditForm?'flex':'hidden'} aside-edit-form flex flex-col absolute top-0 right-0 z-30 bg-[#ffffff] text-black w-[450px] p-6 text-start`}>
+    className={`${isOpenAddForm||isOpenEditForm?'flex':'hidden'} aside-edit-form flex flex-col absolute top-0 right-0 z-30 bg-[#ffffff] text-black w-[450px] sm:w-auto p-6 text-start`}>
          <svg
          onClick={closeAside}
          className='w-8 bg-white rounded-xl cursor-pointer'
@@ -180,7 +180,7 @@ if(isOpenAddForm){
       <input id='fileInput3' type="file" accept="image/png, image/jpeg" ></input>
 
       {
-        isOpenEditForm?   <figure className={`w-14 h-14`}><img src={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${productToEdit.imageUrl}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`} alt="" /></figure>
+        isOpenEditForm?   <figure className={`w-14 h-14`}><img src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${productToEdit.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt="" /></figure>
 :null
       }
 
@@ -283,12 +283,11 @@ if(isOpenAddForm){
         value={categoryValue}
         onChange={(e) => handleChange("category", e)}
         >
-         <option value="suplementos">Suplementos</option>
-         <option value="ropa-hombre">Ropa hombre</option>
-         <option value="ropa-mujer">Ropa Mujer</option>
+         <option value="perfumes-para-hombre">Perfumes para Hombre</option>
+         <option value="perfumes-para-mujer">Perfumes para Mujer</option>
+         <option value="perfumes-unisex">Perfumes Unisex</option>
          <option value="calzado-hombre">Calzado hombre</option>
-         <option value="calzado-mujer">Calzado mujer</option>
-         <option value="implementosdeportivos">Implementos deportivos</option>
+
        </select>
        : 
        <select className='w-full'  
@@ -297,12 +296,11 @@ if(isOpenAddForm){
          required:true
         }) } 
         >
-       <option value="suplementos">Suplementos</option>
-         <option value="ropa-hombre">Ropa hombre</option>
-         <option value="ropa-mujer">Ropa Mujer</option>
-         <option value="calzado-hombre">Calzado hombre</option>
-         <option value="calzado-mujer">Calzado mujer</option>
-         <option value="implementosdeportivos">Implementos deportivos</option>
+       <option value="perfumes-para-hombre">Perfumes para Hombre</option>
+         <option value="perfumes-para-mujer">Perfumes para Mujer</option>
+         <option value="perfumes-unisex">Perfumes Unisex</option>
+         <option value="ofertas">Ofertas</option>
+ 
        </select>}
 
      

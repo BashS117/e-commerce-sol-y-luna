@@ -6,10 +6,10 @@ export default {
   ],
   theme: { colors: {
     'white': '#fff',
-    'blue-ligth': '#8CD8EF',
+    'blue-ligth': '#3a86ff',
     'blue-medium': '#0CAABA',
     'black': '#042642',
-    'purple': '#EC008E',
+    'purple': '#8338ec',
     'gray-footer': '#E5E0FF',
  
   },

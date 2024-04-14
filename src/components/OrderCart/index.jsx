@@ -41,7 +41,7 @@ const {mostrarAlertNotAddedToCart}=useContext(PerfumesContext);
     <div className="flex flex-col items-center g py-2  ">
         <div className="flex items-center h-[70px] px-1 w-full justify-between border-[1px] border-b-black border-orange py-2">
             <figure className="w-14 h-14">
-                <img className="w-full h-full rounded-lg object-cover" src={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${imageUrl}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`} alt={imageUrl} />
+                <img className="w-full h-full rounded-lg object-cover" src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt={imageUrl} />
             </figure>
                 <div className="flex flex-col items-center gap-2">
                 <p className="text-sm font-bold">{name}</p>

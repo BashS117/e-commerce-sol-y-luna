@@ -28,25 +28,15 @@ console.log('filteredProductosssss',filteredProductos)
         
         <div className='flex flex-col justify-start w-full'>
         <p className=' text-start mb-2'># de productos: {filteredProductos?.length}</p>
-            <details name="editar" className=' mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
-                <summary 
-                 onClick={() => {
-                    setSearchByTitle(null)
-                    setSearchByCategory('suplementos')
-                  }}
-                 className='cursor-pointer text-start text-[1.4rem]'>Suplementos</summary>
-        
-            <CardForEdit  />
-       
-            </details>
+            
 
             <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
                 <summary 
                  onClick={() => {
                     setSearchByTitle(null)
-                    setSearchByCategory('ropa-hombre')
+                    setSearchByCategory('perfumes-para-hombre')
                   }}
-                 className='cursor-pointer text-start text-[1.4rem]'>Ropa hombre</summary>
+                 className='cursor-pointer text-start text-[1.4rem]'>Perfumes para Hombre</summary>
             
             <CardForEdit  />
             </details>
@@ -55,9 +45,9 @@ console.log('filteredProductosssss',filteredProductos)
                 <summary 
                 onClick={() => {
                     setSearchByTitle(null)
-                    setSearchByCategory('ropa-mujer')
+                    setSearchByCategory('perfumes-para-Mujer')
                   }}
-                 className='cursor-pointer text-start text-[1.4rem]'>Ropa mujer</summary>
+                 className='cursor-pointer text-start text-[1.4rem]'>Perfumes para Mujer</summary>
             
                         <CardForEdit  />
                     
@@ -66,9 +56,9 @@ console.log('filteredProductosssss',filteredProductos)
             <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
                 <summary onClick={() => {
                     setSearchByTitle(null)
-                    setSearchByCategory('calzado-hombre')
+                    setSearchByCategory('perfumes-unisex')
                   }}
-                   className='cursor-pointer text-start text-[1.4rem]'>Calzado hombre</summary>
+                   className='cursor-pointer text-start text-[1.4rem]'>Perfumes unisex</summary>
             
                         <CardForEdit  />
                     
@@ -77,29 +67,20 @@ console.log('filteredProductosssss',filteredProductos)
             <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
                 <summary onClick={() => {
                     setSearchByTitle(null)
-                    setSearchByCategory('calzado-mujer')
+                    setSearchByCategory('ofertas')
                   }}
-                   className=' cursor-pointer text-start text-[1.4rem]'>Calzado mujer</summary>
+                   className=' cursor-pointer text-start text-[1.4rem]'>Ofertas</summary>
             
                         <CardForEdit  />
                     
             </details>
-            <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
-                <summary onClick={() => {
-                    setSearchByTitle(null)
-                    setSearchByCategory('implementosdeportivos')
-                  }}
-                   className=' cursor-pointer text-start text-[1.4rem]'>Implementos deportivos</summary>
-            
-                        <CardForEdit  />
-                    
-            </details>
+          
 
           
 
-           <EditBanner 
+           {/* <EditBanner 
            AlertUpdateBannerImage={AlertUpdateBannerImage}
-           />
+           /> */}
 
             {/* <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
                 <summary onClick={() => {

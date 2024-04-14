@@ -46,7 +46,7 @@ const logout=()=>{
 
             }}
           >
-            <img className="sm:h-[50px] sm:w-[200px]  w-[280px]" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c57d92193477437.66031e25cbe7f.png" alt="" />
+            <img className="sm:h-[50px] sm:w-[200px]  w-[280px]" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/47f69a177918813.652dc0aac3da7.png" alt="" />
           </NavLink>
        
        

@@ -75,7 +75,7 @@ console.log('filteredProductos en carfor edit,', reversedFilteredProductos)
       openAsideEditForm()}} 
     key={product.id} className='relative cursor-pointer flex w-full justify-between py-[10px] border-b border-b-white items-center'>
       <figure className='h-12 w-12'>
-      <img className='ImageName' src={`https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2F${product.imageUrl}?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9`} alt="" />
+      <img className='ImageName' src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt="" />
       
       </figure>
       <p>{index + 1}</p>

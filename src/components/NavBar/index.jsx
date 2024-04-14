@@ -23,9 +23,9 @@ const NavBar = () => {
       <SettingsBar />
 
       <div className="items-center px-8 pr-10 sm:h-[100%] sm:px-2  w-full flex pt-0  justify-between ">
-        <button className=" bg-black hidden flex-col sm:h-[56px]  sm:flex"
+        <button className=" bg-none hidden flex-col sm:h-[56px]  sm:flex"
           onClick={()=>openSideMenu()}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#EC008E" className="w-10 h-10 relative top-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#8338EC" className="w-10 h-10 relative top-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           <p>        
@@ -223,7 +223,7 @@ const NavBar = () => {
               className={({ isActive }) =>
                 isActive ? activeStyle : 'flex  sm:text-inherit justify-center'
               }>
-                            <img className="ml-1 mb-[2px]" width="30" height="30" src="https://img.icons8.com/ios/50/sneakers.png" alt="sneakers" />
+                            <img className="ml-1 mb-[2px]" width="36" height="36" src="https://img.icons8.com/ios-filled/50/unisex.png" alt="sneakers" />
 
               <p className="flex items-center ml-2">Perfumes Unisex</p>
             </NavLink>
@@ -242,7 +242,7 @@ const NavBar = () => {
               className={({ isActive }) =>
                 isActive ? activeStyle : 'flex justify-center sm:text-inherit'
               }>
-                            <img className="ml-1 mb-[2px]" width="30" height="3 0" src="https://img.icons8.com/ios-filled/50/sneakers.png" alt="sneakers" />            
+                            <img className="ml-1 mb-[2px]" width="30" height="3 0" src="https://img.icons8.com/color/48/discount--v1.png" alt="sneakers" />            
 
              <p  className="flex items-center ml-2 " > Ofertas</p>
             </NavLink>

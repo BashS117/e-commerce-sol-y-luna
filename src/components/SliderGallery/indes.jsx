@@ -47,7 +47,7 @@ const SliderGallery = () => {
                 showThumbnails={false}
                 />
 
-        </div>
+        </div> <h1>hola</h1>
         <div className={`hidden sm:flex w-auto `}>
         <SlideGaleria
             
