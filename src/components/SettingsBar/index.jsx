@@ -23,7 +23,7 @@ const logout=()=>{
 
 
   return (
-    <div className="px-20 w-full bg-[#F6F6F8] absolute top-0 py-[2px] justify-between 
+    <div className="settings-bar px-20 w-full absolute top-0 py-[2px] justify-between 
     flex border-b border-b-white sm:flex sm:relative sm:px-2 sm:h-[48px] sm:py-0 sm:items-center sm:pb-1
     ">
         <ul className='flex text-[#878787] sm:hidden items-center'>

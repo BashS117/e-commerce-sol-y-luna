@@ -5,7 +5,7 @@ const Footer = () => {
 
   const [asunto,setAsunto]=useState('Peticion y solicitud')
   return (
-    <footer className='flex flex-col justify-between  mt-10 pt-10 bg-gray-footer sm:flex-col  '>
+    <footer className='flex text-footer flex-col justify-between  mt-10 pt-10 sm:flex-col  '>
 
       <div className='flex  px-[80px] sm:px-0 justify-between sm:flex-col '>
           <img className="sm:max-w-[380px] h-[80px] sm:px-8  " src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/47f69a177918813.652dc0aac3da7.png" alt="" />
@@ -97,7 +97,7 @@ Sabado y Domingo: 8:00 Am - 7:00 Pm </p>
 
 </div>
 
-<div className='bg-black py-2 items-center text-white text-[0.8rem] sm:text-[0.6rem] flex justify-between p-20 sm:px-4'>
+<div className='bg-black py-2 items-center text-white text-[0.8rem] sm:text-[0.6rem] flex justify-between sm:flex-row-reverse sm:pb-20 p-20 sm:px-4'>
 <p>COPYRIGHT © 2024 Sol y Luna. Todos los Derechos Reservados. Políticas de privacidad.</p>
 
 <figure className='flex sm:px-2 justify-center mb-2'>

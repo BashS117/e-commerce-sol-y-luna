@@ -127,15 +127,38 @@ select{
   button {
     background-color: #f9f9f9;
   }
+  nav{
+    background-color: #fff;
+  
+  }
+  .settings-bar{
+    background-color:#F6F6F8;
+  }
+  footer{
+    background-color: #E5E0FF;
+  }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #E5E0FF;
     background-color: #0d1823;
   }
+nav{
+  background-color: #0d1823;
 
+}
+footer{
+  background-color: #042642;
+  color: #fff;
+
+}
+.text-footer ,.text-footer a{
+  color: #fff;
+}
   button {
-    background-color: #333333;
+    background-color: #0d1823;
+   
   }
   footer{
     color: #191919;

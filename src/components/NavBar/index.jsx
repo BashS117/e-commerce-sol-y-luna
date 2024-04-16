@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
 
-    <nav className="sm:max-h-[auto] bg-white flex flex-col   items-center  z-10 top-0  pt-10   text-sm  font-semibold sm:py-1 sm:px-2 ">
+    <nav className="sm:max-h-[auto]  flex flex-col   items-center  z-10 top-0  pt-10   text-sm  font-semibold sm:py-1 sm:px-2 ">
       <SettingsBar />
 
       <div className="items-center px-8 pr-10 sm:h-[100%] sm:px-2  w-full flex pt-0  justify-between ">
@@ -60,7 +60,7 @@ const NavBar = () => {
         </div>
 
 
-        <div className="flex sm:w-full sm:ml-2 items-center rounded-sm bg-white ">
+        <div className="flex sm:w-full sm:mx-2 items-center rounded-sm bg-white ">
           <InputSearch />
           <span className="bg-transparent rounded-md  cursor-pointer">
             <svg width="28px" height="28px" className="my-2 mx-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,10 +106,10 @@ const NavBar = () => {
         <CheckOutSideMenu />
       </div>
 
-      <div className={`${isOpenMenu ? 'sm:flex ' : 'sm:hidden'} sm:absolute    sm:left-0 sm:top-0 sm:w-[auto] bg-white w-full mt-2 items-start `}>
+      <div className={`${isOpenMenu ? 'sm:flex ' : 'sm:hidden'} sm:absolute sm:z-30   sm:left-0 sm:top-0 sm:w-[auto] bg-white w-full mt-2 items-start `}>
         <ul className={`menu-desktop flex px-40   text-[16px]  justify-between  categories 
            sm:text-[1rem]   
-           sm:text-start sm:px-0 sm:w-[60vw]  sm:fixed sm:top-0 sm:bg-purple sm:z-20 sm:flex-col
+           sm:text-start sm:px-0 sm:w-[60vw]  sm:fixed sm:top-0 sm:bg-purple  sm:flex-col
            
           `}>
 

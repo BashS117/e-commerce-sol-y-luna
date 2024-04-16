@@ -43,10 +43,10 @@ const goBack = (category) => {
             <Loader />
         </div>
     </>:
-     <div className={` flex-col py-0 mt-24 px-8   sm:mt-6 sm:left-0       sm:w-auto sm:h-auto  z-[3] `}>
+     <div className={` flex-col py-0 mt-1 px-8 sm:left-0  sm:px-4  sm:w-auto sm:h-auto  z-[3] `}>
   
    
-     <div className='flex justify-between items-center pt-3'>
+     <div className='flex justify-between items-center pt-0'>
         <h2 className='font-medium text-[1.5rem]'>Detalles del Producto</h2>
        
      </div>
@@ -67,14 +67,14 @@ const goBack = (category) => {
   </button>
     <ImageGallery
       img={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
-      // img2={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl2}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
+      img2={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl2}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       // img3={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl3 }?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       />
   
-  <div className='flex text-start flex-col w-[600px] h-[528px] px-4  pt-20 sm:h-auto sm:w-auto '>
-          <span className='text-lg font-bold text-blue-medium mb-10'>Perfumes Sol y Luna</span>
+  <div className='flex text-start flex-col w-[600px] h-[528px] px-4  pt-0 sm:h-auto sm:w-auto '>
+          <span className='text-lg font-bold text-blue-medium mb-10 sm:mb-4'>Perfumes Sol y Luna</span>
           <h1 className='font-bold text-3xl text-md mb-6'>{product.name}</h1>
-          <h1 className='text-[1.2rem] font-bold'>Descripción</h1>
+          <h1 className='text-[1.2rem] font-bold'>Descripción:</h1>
            <p>{product.description} </p>
 
           <h1 className='text-[1rem] mt-4 font-bold'>TIPO: INSPIRACIÓN</h1>
@@ -121,7 +121,7 @@ const goBack = (category) => {
     
   
       </div>
-      <section className='flex justify-start text-start mt-0'>
+      <section className='flex justify-start text-start mt-0 sm:mt-4'>
         <div className='w-[50%] sm:w-auto flex flex-col gap-2'> 
            
            <p> {`No esperes más y adquiere ${product.name} con las mejores condiciones de envío y al mejor precio. Además en Perfumeria Sol y Luna tienes a tu disposición otro tipo de envases para tu perfume que pueden complementar tu compra. Adquiere ${product.name} y recíbelo cuanto antes en casa.`}</p>
