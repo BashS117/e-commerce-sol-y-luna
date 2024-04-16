@@ -83,7 +83,7 @@ console.log('filteredProductos en carfor edit,', reversedFilteredProductos)
     <p>${product.price}</p>
     <p>Stock: {product.quantity}</p>
     
-    <button className=''  onClick={(event) => {
+    <button className='bg-white'  onClick={(event) => {
         event.stopPropagation(); // Detener la propagación del evento
         deleteProduct(product.id,product.imageUrl,product.imageUrl2,product.imageUrl3); // Llamar a la función para eliminar el producto
     }}>

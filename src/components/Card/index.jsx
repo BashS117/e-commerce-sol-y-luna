@@ -94,8 +94,9 @@ const Card = (data) => {
          
             <div className=" mt-2  flex flex-col  items-center">
                 <div className="flex flex-col text-start w-full">
-                   <p className="font-bold text-orange">${data.data.price}</p>
-                   <h1 className='text-[17px] text-black font-bold pt-1 h-[42px]'>{data.data.name}</h1>
+                   <p className="font-bold  text-black ">${data.data.price}</p>
+                   <span className=" text-blue-ligth text-[14px]">inspirado en:</span>
+                   <h1 className='text-[17px] text-black font-bold pt-0 h-[42px]'>{data.data.name}</h1>
                 </div>
                <AddButton id={data.data.id}
                 data={data.data}

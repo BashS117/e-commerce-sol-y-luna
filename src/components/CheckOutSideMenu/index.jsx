@@ -36,13 +36,13 @@ const CheckOutSideMenu = () => {
   .map((product) => `${product.name} (V/U:  $${product.price}),%0A`);
   const productsText = productNames.join(' ');
   
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=573137601806&text=*¡Nuevo Pedido!*🛵%0A*Productos*: %0A ${productsText}*Valor total:* $${totalPrice(cartProducts)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=573177400171&text=*¡Nuevo Pedido!*🛵%0A*Productos*: %0A ${productsText}*Valor total:* $${totalPrice(cartProducts)}`;
 
 
   const cartItemTotal = cartProducts.map(item => item.amount).reduce((prevValue, currValue) => prevValue + currValue, 0);
 
     return (
-    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} bg-white shadow-2xl flex-col absolute top-0 right-[30px] w-[360px] sm:w-[85vw] h-[90vh] z-[5] sm:right-0 text-black`}>
+    <aside className={`${isCheckOutSideMenuOpen ? 'flex' : 'hidden'} bg-white shadow-2xl flex-col absolute top-0 right-[30px] w-[360px] sm:w-[85vw] h-[90vh] z-30 sm:right-0 text-black`}>
 
       <div className='flex  items-center p-4  bg-orange '>
         <svg
@@ -84,7 +84,7 @@ const CheckOutSideMenu = () => {
     ))}
       </div>
 
-      <div className='px-6 py-4 text-center mr-4 border-t-2 border-t-black '>
+      <div className='px-6 py-4 text-center mr- border-t-2 border-t-black '>
         Te asesoramos con tu compra:
        
 

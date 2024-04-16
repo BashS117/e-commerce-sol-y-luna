@@ -10,7 +10,7 @@ const Checkout = () => {
     const {register, handleSubmit,formState:{errors},}=useForm();
 
   return (
-    <div className='pt-[130px] px-[80px] py-[20px] sm:px-4 sm:pt-[130px]'>
+    <div className='pt-[10px] px-[80px]  sm:px-4 sm:pt-[130px]'>
         <div className='flex text-[8px] font-bold w-full justify-between  sm:px-0'>
             <h1 className='text-orange'>1.CHECKOUT</h1>
             <span className='text-[18px] text-ligth-gray'>{`>`}</span>

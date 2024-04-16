@@ -69,7 +69,7 @@ Sabado y Domingo: 8:00 Am - 7:00 Pm </p>
       </div>
 
 <div className='sm:mt-10 mb-2 flex flex-col items-start pl-4 sm:px-0'>
-  <h1 className='text-orange font-bold text-[16px] text-start sm:w-full sm:text-center'>NECESITAS AYUDA</h1>
+  <h1 className='text-orange font-bold text-[16px] text-start sm:w-full sm:text-center sm:text'>NECESITAS AYUDA</h1>
 <details className='flex rounded-md open:shadow-black open:shadow-xl pr-2 open:pb-2 open:bg-blue-ligth flex-col border-none max-w-[200px] text-start'>
   <summary className=' list-none text-start hover:text-purple cursor-pointer'>Atención al cliente</summary>
   <span className='pl-2'>Asunto:</span>
@@ -97,11 +97,11 @@ Sabado y Domingo: 8:00 Am - 7:00 Pm </p>
 
 </div>
 
-<div className='bg-black py-2 items-center text-white text-[0.8rem] sm:text-[0.6rem] flex justify-between sm:flex-row-reverse sm:pb-20 p-20 sm:px-4'>
+<div className='bg-black py-2 items-center text-white text-[0.8rem] sm:text-[0.6rem] flex justify-between  p-20 sm:px-4 sm:flex-col-reverse border-t'>
 <p>COPYRIGHT © 2024 Sol y Luna. Todos los Derechos Reservados. Políticas de privacidad.</p>
 
-<figure className='flex sm:px-2 justify-center mb-2'>
-  <img className='w-[600px] rounded-xl sm:h-[34px]' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/36f2bd175559299.661c01efd1ff5.png" alt="" /></figure>
+<figure className=' sm:px-4 justify-center mb-2 '>
+  <img className='w-[600px] rounded-xl sm:h-[44px]' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/36f2bd175559299.661c01efd1ff5.png" alt="" /></figure>
    </div>
     </footer>
   )

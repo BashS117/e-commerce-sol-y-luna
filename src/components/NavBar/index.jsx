@@ -13,7 +13,7 @@ const NavBar = () => {
   const { count, closeCheckOutSideMenu, isCheckOutSideMenuOpen,isOpenMenu, setSearchByCategory, cartProducts, setSearchByTitle, openCheckOutSideMenu, closeSideMenu, openSideMenu,openAcountSideMenu } = useContext(PerfumesContext);
 
 
-  const activeStyle = 'underline underline-offset-4 flex  border-b-8 border-b-blue-ligth  '
+  const activeStyle = 'underline underline-offset-4 flex  border-b-8 border-b-blue-ligth sm:border-b-0 sm:border-r-8 sm:border-r-blue-ligth '
 
 
 
@@ -106,75 +106,29 @@ const NavBar = () => {
         <CheckOutSideMenu />
       </div>
 
-      <div className={`${isOpenMenu ? 'sm:flex ' : 'sm:hidden'} sm:absolute sm:z-30   sm:left-0 sm:top-0 sm:w-[auto] bg-white w-full mt-2 items-start `}>
-        <ul className={`menu-desktop flex px-40   text-[16px]  justify-between  categories 
+      <div className={`${isOpenMenu ? 'sm:flex  ' : 'sm:hidden'} sm:absolute sm:z-30   sm:left-0 sm:top-0 sm:w-[auto]  bg-white w-full mt-2 items-start `}>
+        <ul className={`menu-desktop flex px-40   text-[16px]  justify-start  categories 
            sm:text-[1rem]   
-           sm:text-start sm:px-0 sm:w-[60vw]  sm:fixed sm:top-0 sm:bg-purple  sm:flex-col
+           sm:text-start sm:px-0 sm:w-[60vw] sm:h-full  sm:fixed sm:top-0 sm:bg-white  sm:flex-col
            
           `}>
 
 
 
-          {/* <div className={`  sm text-start text-[1.4rem] py-[10px]  bg-orange font-bold mr-2 sm:px-4 `}>
+          <div className={`hidden relative sm:flex text-start text-[1.4rem] py-[10px] sm:w-full  bg-black font-bold mr-2 sm:px-4 `}>
             <button
-              className="bg-[transparent] sm:w-[45px] sm:h-[45px]  hidden sm:flex"
+              className="sm:w-[40px] sm:h-[40px] sm:flex sm:absolute right-[-40px] top-0 rounded-tl-none  shadow-[inset_02px_-0px_02px_rgba(255,255,255,0.6)]  bg-black hidden "
               onClick={() => closeSideMenu()}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            Categorias</div> */}
+            Categorias</div>
 
-          {/* <li className="sm:pl-2 px-0     sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
-       
-            <details name="editar" className=' p-[10px] w-full relative border-none open:text-white open:z-20  open:bg-orange'>
-              <summary  
-              className='cursor-pointer  h-full text-start text-white hover:text-black text-[18px] font-medium'>Bienestar</summary>
-              <div className="absolute shadow-xl shadow-black sm:left-20 top-14 left-0 w-[240px] bg-purple">
-                <NavLink
-                  to='/category/suplementos'
-                  onClick={() => {
-                    setSearchByTitle(null)
-                    closeSideMenu()
-                    setSearchByCategory('suplementos')
-                  }}
+        
 
-                  className={({ isActive }) =>
-                    isActive ? activeStyle : 'flex hover:bg-blue-ligth sm:text-inherit'
-                  }>
-                  <figure className="flex items-center">
-                    <img width="40" height="40" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/external-protein-fitness-kiranshastry-solid-kiranshastry.png" alt="Suplementos" />
-                    <figcaption className="flex justify-center">Suplementos</figcaption>
-                  </figure>           
-                  
-                   </NavLink>
-                <NavLink
-                  to='/category/implementosdeportivos'
-                  onClick={() => {
-                    setSearchByTitle(null)
-                    closeSideMenu()
-                    setSearchByCategory('implementosdeportivos')
-                  }}
-
-                  className={({ isActive }) =>
-                    isActive ? activeStyle : 'flex hover:bg-blue-ligth sm:text-inherit'
-                  }>
-                  <figure className="flex items-center relative">
-                  <img width="30" height="30" src="https://img.icons8.com/pulsar-line/48/sports.png" alt="Implementos deportivos" />
-                  <img className="absolute top-2.5 transform rotate-45  left-3.5" width="30" height="30" src="https://img.icons8.com/dotty/80/000000/rubber-gloves.png" alt="Implementos deportivos" />
-                  <figcaption className="ml-4">Implementos deportivos</figcaption>
-
-                </figure>
-                   </NavLink>
-
-              
-              </div>
-            </details>
-           
-          </li> */}
-
-          <li className="sm:pl-3 sm:flex sm:gap-2 p-0 sm:py-3 sm:border-b-[1px] hover:bg-blue-ligth sm:border-t-[1px] sm:border-t-gray-400">
+          <li className="sm:pl-3 sm:flex sm:gap-2 p-0  sm:border-b-[1px] hover:bg-blue-ligth sm:border-t-[1px] sm:border-t-gray-400">
                     <NavLink
 
               to='/category/perfumes-para-hombre'
@@ -184,7 +138,7 @@ const NavBar = () => {
                 setSearchByCategory('perfumes-para-hombre')
               }}
               className={({ isActive }) =>
-                isActive ? activeStyle : 'flex items-center justify-center sm:text-inherit'
+                isActive ? activeStyle : 'flex items-center justify-center sm:text-inherit sm:justify-start'
               }>
                             <svg className="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H152z" /></svg>             
 
@@ -192,7 +146,7 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <li className="sm:flex sm:gap-2 sm:pl-3 p-0 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
+          <li className="sm:flex sm:gap-2 sm:pl-3 p-0  sm:border-b-[1px] sm:border-b-gray-400">
               <NavLink
 
               to='/category/perfumes-para-mujer'
@@ -203,14 +157,14 @@ const NavBar = () => {
               }}
 
               className={({ isActive }) =>
-                isActive ? activeStyle : 'flex sm:text-inherit justify-center'
+                isActive ? activeStyle : 'flex sm:text-inherit justify-center sm:justify-start'
               }>    
               <svg className=" h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#020203" d="M160 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM88 384H70.2c-10.9 0-18.6-10.7-15.2-21.1L93.3 248.1 59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l53.6-89.2c20.3-33.7 56.7-54.3 96-54.3h11.6c39.3 0 75.7 20.6 96 54.3l53.6 89.2c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9l-33.9-56.3L265 362.9c3.5 10.4-4.3 21.1-15.2 21.1H232v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384H152v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384z" /></svg>                       
               <p className="flex items-center">Perfumes para Mujer</p>
             </NavLink>
           </li>
 
-          <li className="sm:flex sm:gap-1 sm:pl-3  p-0 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
+          <li className="sm:flex sm:gap-1 sm:pl-3  p-0  sm:border-b-[1px] sm:border-b-gray-400">
 
             <NavLink
               to='/category/perfumes-unisex'
@@ -221,15 +175,15 @@ const NavBar = () => {
               }}
 
               className={({ isActive }) =>
-                isActive ? activeStyle : 'flex  sm:text-inherit justify-center'
+                isActive ? activeStyle : 'flex  sm:text-inherit justify-center sm:justify-start'
               }>
-                            <img className="ml-1 mb-[2px]" width="36" height="36" src="https://img.icons8.com/ios-filled/50/unisex.png" alt="sneakers" />
+                            <img className="ml-1 sm:ml-0 mb-[2px]" width="32" height="36" src="https://img.icons8.com/ios-filled/50/unisex.png" alt="sneakers" />
 
-              <p className="flex items-center ml-2">Perfumes Unisex</p>
+              <p className="flex items-center ml-2 sm:ml-0">Perfumes Unisex</p>
             </NavLink>
           </li>
 
-          <li className="sm:pl-3 sm:flex sm:gap-1 p-0 sm:py-3 sm:border-b-[1px] sm:border-b-gray-400">
+          <li className="sm:pl-3 sm:flex sm:gap-1 p-0  sm:border-b-[1px] sm:border-b-gray-400">
               <NavLink
               to='/category/ofertas'
               onClick={() => {
@@ -240,11 +194,11 @@ const NavBar = () => {
               }}
 
               className={({ isActive }) =>
-                isActive ? activeStyle : 'flex justify-center sm:text-inherit'
+                isActive ? activeStyle : 'flex justify-center sm:text-inherit sm:justify-start'
               }>
-                            <img className="ml-1 mb-[2px]" width="30" height="3 0" src="https://img.icons8.com/color/48/discount--v1.png" alt="sneakers" />            
+                            <img className="ml-1 sm:ml-0 mb-[2px]" width="30" height="3 0" src="https://img.icons8.com/color/48/discount--v1.png" alt="sneakers" />            
 
-             <p  className="flex items-center ml-2 " > Ofertas</p>
+             <p  className="flex items-center ml-2 sm:ml-1 " > Ofertas</p>
             </NavLink>
           </li>
 

@@ -53,17 +53,19 @@ const {mostrarAlertNotAddedToCart}=useContext(PerfumesContext);
                 {renderX}
         </div>
                 <div className="flex flex-col w-full px-1  border-[1px] border-t-0 border-orange">
-                    <div className="flex justify-between">
+                    <div className="flex justify-between mt-1">
                         <p>
                             Cantidad
                         </p>
-                        <button onClick={handleDecrease} className={`$ px-2 bg-orange`}>
+                       <div className="w-[100px] flex justify-between">
+                       <button onClick={handleDecrease} className={`$ px-2 text-[20px] font-bold bg-blue-medium`}>
                           -
                         </button>
                         <span className="px-2">{quantityState}</span>
-                        <button onClick={handleIncrease} className={`$ px-2 bg-orange`}>
+                        <button onClick={handleIncrease} className={`$ px-2 text-[20px] font-bold bg-blue-medium`}>
                         +
                         </button>
+                       </div>
                     </div>
                     <div className="flex justify-between">
                         <p>

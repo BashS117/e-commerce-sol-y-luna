@@ -66,9 +66,9 @@ useEffect(()=>{
 })
 
   return (<>
-  <figure>
+{location.pathname === '/' &&  <figure>
     <img className='w-full' src="https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2Fsecondbanner1.jpg?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9" alt="" />
-  </figure>
+  </figure>}
   {/* {location.pathname === '/' &&<SliderGallery/>} */}
             {/* <div className='px-[80px]'>
             

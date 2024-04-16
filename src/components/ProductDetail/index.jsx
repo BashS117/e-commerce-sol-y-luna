@@ -121,7 +121,7 @@ const goBack = (category) => {
     
   
       </div>
-      <section className='flex justify-start text-start mt-0 sm:mt-4'>
+      <section className='flex justify-start text-start mt-2 sm:mt-4'>
         <div className='w-[50%] sm:w-auto flex flex-col gap-2'> 
            
            <p> {`No esperes más y adquiere ${product.name} con las mejores condiciones de envío y al mejor precio. Además en Perfumeria Sol y Luna tienes a tu disposición otro tipo de envases para tu perfume que pueden complementar tu compra. Adquiere ${product.name} y recíbelo cuanto antes en casa.`}</p>

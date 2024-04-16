@@ -30,7 +30,7 @@ console.log('filteredProductosssss',filteredProductos)
         <p className=' text-start mb-2'># de productos: {filteredProductos?.length}</p>
             
 
-            <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
+            <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
                 <summary 
                  onClick={() => {
                     setSearchByTitle(null)
@@ -41,7 +41,7 @@ console.log('filteredProductosssss',filteredProductos)
             <CardForEdit  />
             </details>
 
-            <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
+            <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
                 <summary 
                 onClick={() => {
                     setSearchByTitle(null)
@@ -53,7 +53,7 @@ console.log('filteredProductosssss',filteredProductos)
                     
             </details>
 
-            <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
+            <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
                 <summary onClick={() => {
                     setSearchByTitle(null)
                     setSearchByCategory('perfumes-unisex')
@@ -64,7 +64,7 @@ console.log('filteredProductosssss',filteredProductos)
                     
             </details>
 
-            <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
+            <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
                 <summary onClick={() => {
                     setSearchByTitle(null)
                     setSearchByCategory('ofertas')
@@ -82,7 +82,7 @@ console.log('filteredProductosssss',filteredProductos)
            AlertUpdateBannerImage={AlertUpdateBannerImage}
            /> */}
 
-            {/* <details name="editar" className='mb-[8px] p-[10px] rounded-md open:text-black open:bg-orange'>
+            {/* <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
                 <summary onClick={() => {
                     setSearchByTitle(null)
                     setSearchByCategory('ventas-al-por-mayor')
