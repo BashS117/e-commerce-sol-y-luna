@@ -145,7 +145,7 @@ useEffect(() => {
         console.log('AÑADIENDO')
         event.stopPropagation();
         
-        const existingProductIndex = cartProducts.findIndex(product => product.id === id);
+        const existingProductIndex = cartProducts.findIndex(product => product.id === `${id}${productData.volume}`);
         const stockAvailable = productData.quantity;
 
         //si el producto esta en el carrito
@@ -170,7 +170,7 @@ useEffect(() => {
             // Si el producto no está en el carrito, agrégalo con una cantidad de 1
             const modifiedProduct = {
                 ...productData,
-                id: id,
+                id: `${id}${productData.volume}`,
                 amount: 1,
             };
             setCount(count + 1);

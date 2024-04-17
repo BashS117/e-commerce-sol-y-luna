@@ -14,6 +14,7 @@ const ProductDetail = () => {
   const {loading, setLoading,isProductDetailOpen,closeProductDetail,setSearchByCategory}=useContext(PerfumesContext);
   
   const [product, setProduct] = useState('')
+  const [selectedVolume, setSelectedVolume] = useState('30ml'); // Estado para rastrear el volumen seleccionado
 
   const { id } = useParams()
   console.log(id)
@@ -37,6 +38,28 @@ const ProductDetail = () => {
 const goBack = (category) => {
   window.location.href=`/category/${category}`;
 }
+
+const handleVolumeChange = (event) => {
+  setSelectedVolume(event.target.value); // Actualizar el estado cuando cambie el volumen seleccionado
+  const updatedProduct = { ...product }; // Creamos una copia del producto actual
+  // Actualizamos el precio del producto dependiendo del volumen seleccionado
+  if(event.target.value==='30ml'){
+    updatedProduct.price = 15000 ;
+    updatedProduct.volume = '30ml' ;
+
+  }else{
+    updatedProduct.price = 25000 ;
+    updatedProduct.volume = '60ml' ;
+  }
+  setProduct(updatedProduct); // Actualizamos el estado del producto con el precio ajustado
+  
+};
+const getPrice = () => {
+  if (selectedVolume === '60ml') {
+    return 25000; // Si el volumen seleccionado es 60ml, ajustar el precio
+  }
+  return product.price; // De lo contrario, mantener el precio original del producto
+};
   return (<>    {loading ?
     <>
         <div className="flex mt-40 justify-center items-center">
@@ -69,6 +92,7 @@ const goBack = (category) => {
       img={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       img2={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl2}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       // img3={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl3 }?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
+      selectedVolume={selectedVolume}
       />
   
   <div className='flex text-start flex-col w-[600px] h-[528px] px-4  pt-0 sm:h-auto sm:w-auto '>
@@ -79,14 +103,24 @@ const goBack = (category) => {
 
           <h1 className='text-[1rem] mt-4 font-bold'>TIPO: INSPIRACIÓN</h1>
 
-          {/* <strong className='mt-2'>Elige el volumen:</strong>
+          <strong className='mt-2'>Elige el volumen:</strong>
           <form >
-    <input type="radio" id="volumen30" name="volumen" value="30ml"/>
+    <input 
+    type="radio" 
+    id="volumen30" 
+    name="volumen" 
+    value="30ml"
+    checked={selectedVolume === '30ml'} // Marcar el primer radio input como activo por defecto
+    onChange={handleVolumeChange}
+    />
     <label for="volumen30">30ml</label>
-    <input type="radio" id="volumen60" name="volumen" value="60ml"/>
+    <input type="radio" id="volumen60" name="volumen" value="60ml"
+    checked={selectedVolume === '60ml'}
+    onChange={handleVolumeChange}
+    />
     <label for="volumen60">60ml</label>
-</form> */}
-          <span className='border-t-purple border-t text-lg font-bold'>${product.price}</span>
+</form>
+          <span className='border-t-purple border-t text-lg font-bold'>${getPrice()}</span>
   
       {/* <span className='font-light text-sm'>${product.description}</span> */}
       <div className='w-[300px] sm:w-full'>

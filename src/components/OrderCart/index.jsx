@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useContext } from "react"
 import { PerfumesContext } from "../../Context"
 const OrderCard = props => {
-    const {id,name,imageUrl,price,amount,quantity,handleDelete,updateQuantity,inactivebuttons}= props
+    const {id,name,imageUrl,price,amount,quantity,volume,handleDelete,updateQuantity,inactivebuttons}= props
 const {mostrarAlertNotAddedToCart}=useContext(PerfumesContext);
     console.log("quantitu",amount)
     let renderX
@@ -46,7 +46,7 @@ const {mostrarAlertNotAddedToCart}=useContext(PerfumesContext);
                 <div className="flex flex-col items-center gap-2">
                 <p className="text-sm font-bold">{name}</p>
 
-                    <p className="text-lg font-medium">1 x ${price}</p>
+                    <p className="text-lg font-medium">{volume}/1 x ${price}</p>
               
                    
                 </div>
@@ -57,6 +57,7 @@ const {mostrarAlertNotAddedToCart}=useContext(PerfumesContext);
                         <p>
                             Cantidad
                         </p>
+                        
                        <div className="w-[100px] flex justify-between">
                        <button onClick={handleDecrease} className={`$ px-2 text-[20px] font-bold bg-blue-medium`}>
                           -

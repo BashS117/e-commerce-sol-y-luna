@@ -28,10 +28,10 @@ const logout=()=>{
     ">
         <ul className='flex text-[#878787] sm:hidden items-center'>
             <li className='flex'>Teléfono: 
-              <p className='text-orange'> +57 317 740 0171</p>
+              <p className=''> +57 317 740 0171</p>
               </li>
             <li> Email:
-               <a className='text-black' href="mailto:sebasrm2000@gmail.com?subject=Job%20Offer&body=Hello%20there%2C%20we%20contacted%20you%20from%20your%20website">
+               <a className='text-[#878787]' href="mailto:sebasrm2000@gmail.com?subject=Job%20Offer&body=Hello%20there%2C%20we%20contacted%20you%20from%20your%20website">
                sebasrm2000@gmail.com</a>
             </li>
         </ul> 

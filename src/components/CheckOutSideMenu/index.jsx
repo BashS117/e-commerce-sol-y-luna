@@ -78,6 +78,7 @@ const CheckOutSideMenu = () => {
         price={product.price}
         amount={product.amount}
         quantity={product.quantity}
+        volume={product.volume}
         handleDelete={handleDelete}
         updateQuantity={updateCartItemAmount} // Nueva prop
         />
