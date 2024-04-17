@@ -22,8 +22,8 @@ const ImageGallery = ({ img, img2, img3,selectedVolume }) => {
     ]
 
     return (
-        <div className=' w-[700px] bg-white relative flex m-auto sm:w-auto ml-4 sm:pt-4'>
-           <div className='text-black absolute top-1 px-2 z-20 flex w-full justify-between'><p>Inspiración:</p> <p>Nuestra Fragancia:</p></div>
+        <div className=' w-[700px] bg-white relative flex m-auto sm:w-auto ml-4 sm:pt-4 pt-2 '>
+           <div className='text-black absolute top-0 px-2 z-20 flex w-full justify-between'><p>Inspiración:</p> <p>Nuestra Fragancia:</p></div>
             <ImageGaleria
                 items={images} 
                 showPlayButton={false}
