@@ -7,8 +7,7 @@ import WhatsAppButton from '../../components/WhatsAppButton'
 // import { supabase } from '../../supabase/client'
 // import { useState } from 'react'
 import './home.css'
-import SliderGallery from '../../components/SliderGallery/indes'
-import SliderGallerySecondBanner from '../../components/SecondBanner'
+
 import { useLocation } from 'react-router-dom'
 
 
