@@ -75,7 +75,7 @@ const Card = (data) => {
             // onClick={() => showingProduct(modifiedData)}
         >
 
-            <figure className='flex  relative mb-0.5 overflow-hidden shadow-xl   w-full h-[55%]'>
+            <figure className='flex  relative mb-0.5 shadow-xl overflow-hidden   w-full '>
 
                 {/* <span className='z-[2] absolute bottom-[-2px] left-[38px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
                     Marca o algún detalle  
@@ -83,8 +83,8 @@ const Card = (data) => {
                 {/* <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
                     {data.data.category}
                 </span> */}               
-             <img className='h-[178px]   w-full rounded-lg z-[2] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt='imagen' />
-             <img className='h-[178px] relative right-10 w-full rounded-lg z-[1] object-cover' src={`https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png`} alt='imagen' />
+             <img className='h-[178px] sm:h-[110px]  w-full rounded-lg z-[2] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt='imagen' />
+                <img className='h-[178px] sm:h-[110px]  sm:right-6 relative right-10 w-full rounded-lg z-[1] object-cover' src={`https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png`} alt='imagen' />
 
             </figure>
             {/* <img 
