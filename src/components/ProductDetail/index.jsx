@@ -102,9 +102,9 @@ const getPrice = () => {
           <h1 className='text-[1.2rem] font-bold'>Descripción:</h1>
            <p>{product.description} </p>
 
-          <h1 className='text-[1rem] mt-4 font-bold'>TIPO: INSPIRACIÓN</h1>
+          <h1 className='text-[1rem] mt-4 font-bold'>TIPO: {product.category==="premium-hombre"||product.category==="premium-mujer"|| product.category === "ofertas" ?"AAA/1.1":"Inspiración"}</h1>
 
-        {product.category==="premium-hombre"||product.category==="premium-mujer"?
+        {product.category==="premium-hombre"||product.category==="premium-mujer" || product.category === "ofertas"?
         null
       :
       <div>  <strong className='mt-2'>Elige el volumen:</strong>

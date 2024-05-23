@@ -66,7 +66,7 @@ useEffect(()=>{
 
   return (<>
 {location.pathname === '/' &&  <figure>
-    <img className='w-full' src="https://firebasestorage.googleapis.com/v0/b/blue-fashion-983e2.appspot.com/o/imagenes%2Fsecondbanner1.jpg?alt=media&token=d6f78fa2-9034-4a18-bf50-0038362114c9" alt="" />
+    <img className='w-full' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/876b45175559299.664ed15aade61.jpg" alt="" />
   </figure>}
   {/* {location.pathname === '/' &&<SliderGallery/>} */}
             {/* <div className='px-[80px]'>

@@ -84,7 +84,7 @@ const Card = (data) => {
                     {data.data.category}
                 </span> */}               
              <img className='h-[178px] sm:h-[110px]  w-full rounded-lg z-[2] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt='imagen' />
-             {data.data.category==="premium-hombre" || data.data.category === "premium-mujer"?
+             {data.data.category==="premium-hombre" || data.data.category === "premium-mujer" || data.data.category === "ofertas"?
              null
              : 
              <img className='h-[178px] sm:h-[110px]  sm:right-6 relative right-10 w-full rounded-lg z-[1] object-cover' src={`https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png`} alt='imagen' />
@@ -98,7 +98,7 @@ const Card = (data) => {
             <div className=" mt-2  flex flex-col  items-center">
                 <div className="flex flex-col text-start w-full">
                    <p className="font-bold  text-black ">${data.data.price}</p>
-                   <span className=" text-blue-ligth text-[14px]">{data.data.category==="premium-hombre" || data.data.category === "premium-mujer"?null:"inspirado en:"}</span>
+                   <span className=" text-blue-ligth text-[14px]">{data.data.category==="premium-hombre" || data.data.category === "premium-mujer" || data.data.category === "ofertas"?null:"inspirado en:"}</span>
                    <h1 className='text-[17px] text-black font-bold pt-0 h-[42px]'>{data.data.name}</h1>
                 </div>
                <AddButton id={data.data.id}

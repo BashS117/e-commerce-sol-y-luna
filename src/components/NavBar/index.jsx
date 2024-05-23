@@ -115,12 +115,12 @@ const NavBar = () => {
 
 
 
-          <div className={`hidden relative sm:flex text-start text-[1.4rem] py-[10px] sm:w-full  bg-black font-bold mr-2 sm:px-4 `}>
+          <div className={`hidden relative sm:flex text-start text-[1.4rem] py-[10px] sm:w-full  bg-white font-bold mr-2 sm:px-4 `}>
             <button
               className="sm:w-[40px] sm:h-[40px] sm:flex sm:absolute right-[-40px] top-0 rounded-tl-none  shadow-[inset_02px_-0px_02px_rgba(255,255,255,0.6)]  bg-black hidden "
               onClick={() => closeSideMenu()}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#ffffff" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -129,7 +129,7 @@ const NavBar = () => {
 
             <details name="editar" className='  hover:bg-[#8CD8EF] w-full relative border-none open:z-30 items-center'>
               <summary  
-              className='cursor-pointer  h-full text-start flex items-center   text-[18px] font-medium'>Perfumes Premium</summary>
+              className='cursor-pointer  h-full text-start flex items-center sm:p-3  text-[18px] font-medium  border-t'>Perfumes Premium</summary>
               <div className="absolute shadow-xl shadow-black sm:left-20 top-14 left-0 w-[220px] bg-white">
              <li className="p-0">
                  <NavLink

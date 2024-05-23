@@ -23,7 +23,7 @@ const ImageGallery = ({ img, img2, img3,selectedVolume, productCategory }) => {
 
     return (
         <div className=' w-[auto] bg-white relative flex m-auto  sm:w-auto   '>
-            {productCategory === "premium-hombre"||productCategory === "premium-mujer"?
+            {productCategory === "premium-hombre"||productCategory === "premium-mujer"|| productCategory === "ofertas"?
             null:
             <div className='text-black absolute top-0 px-2 z-20 flex w-full justify-between'><p>Inspiración:</p> <p>Nuestra Fragancia:</p></div>
 }
@@ -36,7 +36,7 @@ const ImageGallery = ({ img, img2, img3,selectedVolume, productCategory }) => {
                 
                 />
 
-{productCategory === "premium-hombre"||productCategory === "premium-mujer"?
+{productCategory === "premium-hombre"||productCategory === "premium-mujer" || productCategory === "ofertas"?
             null:
 <figure className='w-[150px] overflow-hidden '>
     {selectedVolume==='30ml'?    <img className='object-cover h-[430px] sm:h-full ' src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png" alt="" />
