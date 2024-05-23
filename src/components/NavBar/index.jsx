@@ -106,8 +106,8 @@ const NavBar = () => {
         <CheckOutSideMenu />
       </div>
 
-      <div className={`${isOpenMenu ? 'sm:flex  ' : 'sm:hidden'} sm:absolute sm:z-30   sm:left-0 sm:top-0 sm:w-[auto]  bg-white w-full mt-2 items-start `}>
-        <ul className={`menu-desktop flex px-40   text-[16px]  justify-start  categories 
+      <div className={`${isOpenMenu ? 'sm:flex  ' : 'sm:hidden'} sm:absolute sm:z-30 sm:left-0 sm:top-0 sm:w-[auto]  bg-white w-full mt-2 items-start `}>
+        <ul className={`menu-desktop categories  flex px-20   text-[16px]  justify-start  
            sm:text-[1rem]   
            sm:text-start sm:px-0 sm:w-[60vw] sm:h-full  sm:fixed sm:top-0 sm:bg-white  sm:flex-col
            
@@ -126,9 +126,78 @@ const NavBar = () => {
             </button>
             Categorias</div>
 
+
+            <details name="editar" className='  hover:bg-[#8CD8EF] w-full relative border-none open:z-30 items-center'>
+              <summary  
+              className='cursor-pointer  h-full text-start flex items-center   text-[18px] font-medium'>Perfumes Premium</summary>
+              <div className="absolute shadow-xl shadow-black sm:left-20 top-14 left-0 w-[220px] bg-white">
+             <li className="p-0">
+                 <NavLink
+                  to='/category/premium-hombre'
+                  onClick={() => {
+                    setSearchByTitle(null)
+                    closeSideMenu()
+                    setSearchByCategory('premium-hombre')
+                  }}
+
+                  className={({ isActive }) =>
+                    isActive ? activeStyle : 'flex sm:text-inherit'
+                  }>
+                  <figure className="flex items-center">
+                  <svg fill="#000000" height="34px" width="38px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 442 442" xml:space="preserve">
+<g>
+	<path d="M231.5,50.5c0-5.79-4.71-10.5-10.5-10.5c-5.79,0-10.5,4.71-10.5,10.5S215.21,61,221,61C226.79,61,231.5,56.29,231.5,50.5z"
+		/>
+	<path d="M346,163.682h-60V122c0-5.522-4.478-10-10-10h-10V10c0-5.523-4.478-10-10-10h-70c-5.523,0-10,4.477-10,10v102h-10
+		c-5.523,0-10,4.478-10,10v41.682H96c-11.028,0-20,8.972-20,20V422c0,11.028,8.972,20,20,20h250c11.028,0,20-8.972,20-20V183.682
+		C366,172.653,357.028,163.682,346,163.682z M196,20h50v92h-50V20z M96,422V183.682h70c5.523,0,10-4.477,10-10V132h35v71.682h-85
+		c-5.523,0-10,4.478-10,10V392c0,5.522,4.477,10,10,10h190c5.522,0,10-4.478,10-10v-60.892c0-5.522-4.478-10-10-10s-10,4.478-10,10
+		V382H136V223.682h75V352c0,5.522,4.477,10,10,10c5.523,0,10-4.478,10-10V223.682h75V297c0,5.522,4.478,10,10,10s10-4.478,10-10
+		v-83.318c0-5.522-4.478-10-10-10h-85V132h35v41.682c0,5.523,4.478,10,10,10h70L346.002,422H96z"/>
+</g>
+</svg>                   <figcaption className="ml-4 text-black">Premium Hombre</figcaption>
+                  </figure>           
+                  
+                   </NavLink>
+                   </li>
+
+              <li className="p-0">
+              <NavLink
+                  to='/category/premium-mujer'
+                  onClick={() => {
+                    setSearchByTitle(null)
+                    closeSideMenu()
+                    setSearchByCategory('premium-mujer')
+                  }}
+
+                  className={({ isActive }) =>
+                    isActive ? activeStyle : 'flex  sm:text-inherit'
+                  }>
+                  <figure className="flex items-center relative">
+                  <svg fill="#000000" width="38px" height="38px" viewBox="0 0 512 512" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<g id="perfume-bottle-heart-love-valentine">
+
+<path d="M433.68,105.666l-19.952,20.46c-3.14,3.22-8.315,3.22-11.455,0l-19.952-20.46c-7.017-7.196-8.387-18.749-2.104-26.593   c7.145-8.922,20.021-9.403,27.784-1.442c7.763-7.96,20.64-7.479,27.784,1.442C442.067,86.917,440.697,98.47,433.68,105.666z    M365.793,220.137c13.734,17.879,18.281,40.629,12.473,62.418l-36.199,135.754C337.398,435.789,321.508,448,303.414,448h-94.828   c-18.094,0-33.984-12.211-38.652-29.691l-36.199-135.754c-5.809-21.789-1.262-44.539,12.473-62.418   c13.06-17,32.535-26.992,53.793-27.949V168c0-10.416,6.708-19.213,16-22.526V88c0-13.234,10.766-24,24-24h32   c13.234,0,24,10.766,24,24v57.474c9.292,3.313,16,12.11,16,22.526v24.188C333.258,193.145,352.733,203.137,365.793,220.137z    M232,88v56h48v-18.219c-4.762-2.771-8-7.874-8-13.781s3.238-11.009,8-13.78V88c0-4.41-3.59-8-8-8h-32C235.59,80,232,83.59,232,88z    M264,360c0-4.418-3.582-8-8-8c-4.418,0-8,3.582-8,8c0,4.418,3.582,8,8,8C260.418,368,264,364.418,264,360z M264,400   c0,8.836,7.164,16,16,16c8.837,0,16-7.164,16-16c0-8.837-7.163-16-16-16C271.164,384,264,391.163,264,400z M248,312   c0-4.418-3.582-8-8-8c-4.418,0-8,3.582-8,8c0,4.418,3.582,8,8,8C244.418,320,248,316.418,248,312z M312,360c4.418,0,8-3.582,8-8   c0-4.418-3.582-8-8-8c-4.418,0-8,3.582-8,8C304,356.418,307.582,360,312,360z M224,352c0-8.837-7.163-16-16-16   c-8.836,0-16,7.163-16,16c0,8.836,7.164,16,16,16C216.837,368,224,360.836,224,352z M192,296c0-4.418-3.582-8-8-8   c-4.418,0-8,3.582-8,8c0,4.418,3.582,8,8,8C188.418,304,192,300.418,192,296z M353.105,229.883   C342.418,215.977,326.234,208,308.695,208H304h-96h-4.695c-17.539,0-33.723,7.977-44.41,21.883   c-10.684,13.906-14.219,31.602-9.699,48.547l1.754,6.58C178.349,248.323,233.337,250.402,256,264   c36.68,22.215,59.46,56.165,98.594,45.22l8.21-30.79C367.324,261.484,363.789,243.789,353.105,229.883z M320,104h16   c13.234,0,24-10.766,24-24v-8c0-4.418-3.582-8-8-8s-8,3.582-8,8v8c0,4.41-3.59,8-8,8h-16c-4.418,0-8,3.582-8,8S315.582,104,320,104   z M360,120h-40c-4.418,0-8,3.582-8,8s3.582,8,8,8h40c4.41,0,8,3.59,8,8v8c0,4.418,3.582,8,8,8s8-3.582,8-8v-8   C384,130.766,373.234,120,360,120z"/>
+
+</g>
+
+<g id="Layer_1"/>
+
+</svg>
+                  <figcaption className="ml-4 text-black">Premium Mujer</figcaption>
+
+                </figure>
+                   </NavLink>
+              </li>
+
+              
+              </div>
+            </details>
         
 
-          <li className="sm:pl-3 sm:flex sm:gap-2 p-0  sm:border-b-[1px] hover:bg-blue-ligth sm:border-t-[1px] sm:border-t-gray-400">
+          <li className="sm:pl-3 sm:flex sm:gap-2 p-0  sm:border-b-[1px]  sm:border-t-[1px] sm:border-t-gray-400">
                     <NavLink
 
               to='/category/perfumes-para-hombre'

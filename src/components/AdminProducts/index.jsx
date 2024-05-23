@@ -65,6 +65,30 @@ console.log('filteredProductosssss',filteredProductos)
             </details>
 
             <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
+                <summary 
+                onClick={() => {
+                    setSearchByTitle(null)
+                    setSearchByCategory('premium-hombre')
+                  }}
+                 className='cursor-pointer text-start text-[1.4rem]'>Premium Hombre</summary>
+            
+                        <CardForEdit  />
+                    
+            </details>
+
+            <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
+                <summary 
+                onClick={() => {
+                    setSearchByTitle(null)
+                    setSearchByCategory('premium-mujer')
+                  }}
+                 className='cursor-pointer text-start text-[1.4rem]'>Premium Mujer</summary>
+            
+                        <CardForEdit  />
+                    
+            </details>
+
+            <details name="editar" className='mb-[8px] p-[10px] rounded-md  open:bg-orange'>
                 <summary onClick={() => {
                     setSearchByTitle(null)
                     setSearchByCategory('ofertas')

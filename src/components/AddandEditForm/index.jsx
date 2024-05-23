@@ -286,6 +286,8 @@ if(isOpenAddForm){
          <option value="perfumes-para-hombre">Perfumes para Hombre</option>
          <option value="perfumes-para-mujer">Perfumes para Mujer</option>
          <option value="perfumes-unisex">Perfumes Unisex</option>
+         <option value="premium-hombre">Premium Hombre</option>
+         <option value="premium-mujer">Premium Mujer</option>
          <option value="calzado-hombre">Calzado hombre</option>
 
        </select>
@@ -299,6 +301,8 @@ if(isOpenAddForm){
        <option value="perfumes-para-hombre">Perfumes para Hombre</option>
          <option value="perfumes-para-mujer">Perfumes para Mujer</option>
          <option value="perfumes-unisex">Perfumes Unisex</option>
+         <option value="premium-hombre">Premium Hombre</option>
+         <option value="premium-mujer">Premium Mujer</option>
          <option value="ofertas">Ofertas</option>
  
        </select>}

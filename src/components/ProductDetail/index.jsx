@@ -93,6 +93,7 @@ const getPrice = () => {
       img2={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl2}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       // img3={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${product.imageUrl3 }?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
       selectedVolume={selectedVolume}
+      productCategory={product.category}
       />
   
   <div className='flex text-start flex-col w-[600px] h-[528px] px-4  pt-0 sm:h-auto sm:w-auto '>
@@ -103,23 +104,27 @@ const getPrice = () => {
 
           <h1 className='text-[1rem] mt-4 font-bold'>TIPO: INSPIRACIÓN</h1>
 
-          <strong className='mt-2'>Elige el volumen:</strong>
-          <form >
-    <input 
-    type="radio" 
-    id="volumen30" 
-    name="volumen" 
-    value="30ml"
-    checked={selectedVolume === '30ml'} // Marcar el primer radio input como activo por defecto
-    onChange={handleVolumeChange}
-    />
-    <label for="volumen30">30ml</label>
-    <input type="radio" id="volumen60" name="volumen" value="60ml"
-    checked={selectedVolume === '60ml'}
-    onChange={handleVolumeChange}
-    />
-    <label for="volumen60">60ml</label>
-</form>
+        {product.category==="premium-hombre"||product.category==="premium-mujer"?
+        null
+      :
+      <div>  <strong className='mt-2'>Elige el volumen:</strong>
+      <form >
+<input 
+type="radio" 
+id="volumen30" 
+name="volumen" 
+value="30ml"
+checked={selectedVolume === '30ml'} // Marcar el primer radio input como activo por defecto
+onChange={handleVolumeChange}
+/>
+<label for="volumen30">30ml</label>
+<input type="radio" id="volumen60" name="volumen" value="60ml"
+checked={selectedVolume === '60ml'}
+onChange={handleVolumeChange}
+/>
+<label for="volumen60">60ml</label>
+</form></div>
+      }
           <span className='border-t-purple border-t text-lg font-bold'>${getPrice()}</span>
   
       {/* <span className='font-light text-sm'>${product.description}</span> */}
