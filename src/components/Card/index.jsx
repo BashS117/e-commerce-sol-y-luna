@@ -66,60 +66,96 @@ const Card = (data) => {
     
 
     return (
-        <div
-            className=' mx-auto   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[18rem] sm:w-[11.5rem]  border border-ligth-gray p-3 '
-            onClick={() => {
-                
-                navigate(`/productdetail/${data.data.id}`)}
-            }
-            // onClick={() => showingProduct(modifiedData)}
-        >
-
-            <figure className='flex  relative mb-0.5 shadow-xl overflow-hidden   w-full '>
-
-                {/* <span className='z-[2] absolute bottom-[-2px] left-[38px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
+      <div
+        className=" mx-auto flex flex-col justify-between   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[18rem] sm:w-[11.5rem]  border border-ligth-gray p-3 "
+        onClick={() => {
+          navigate(`/productdetail/${data.data.id}`);
+        }}
+        // onClick={() => showingProduct(modifiedData)}
+      >
+        <div>
+        <figure className="flex  relative mb-0.5 shadow-xl overflow-hidden   w-full ">
+          {/* <span className='z-[2] absolute bottom-[-2px] left-[38px] bg-[#b2a9e0b3]/70 rounded-lg text-black text-[8.6px] m-0 p-2 py-0.5 leading-[8px]'>
                     Marca o algún detalle  
                 </span> */}
-                {/* <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
+          {/* <span className='z-[2] absolute top-[-5px] left-[-5px] bg-[#b2a9e0b3]/70 rounded-md text-black text-[10px] m-0 p-1'>
                     {data.data.category}
-                </span> */}               
-             <img className='h-[178px] sm:h-[110px]  w-full rounded-lg z-[2] object-cover' src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`} alt='imagen' />
-             {data.data.category==="premium-hombre" || data.data.category === "premium-mujer" || data.data.category === "ofertas"?
-             null
-             : 
-             <img className='h-[178px] sm:h-[110px]  sm:right-6 relative right-10 w-full rounded-lg z-[1] object-cover' src={`https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png`} alt='imagen' />
-}
-            </figure>
-            {/* <img 
+                </span> */}
+          <img
+            className="h-[178px] sm:h-[110px]  w-full rounded-lg z-[2] object-cover"
+            src={`https://firebasestorage.googleapis.com/v0/b/solyluna-23.appspot.com/o/imagenes%2F${data.data.imageUrl}?alt=media&token=d64f2d52-e608-4480-a4c1-cb0733445d89`}
+            alt="imagen"
+          />
+          {data.data.category === "premium-hombre" ||
+          data.data.category === "premium-mujer" ||
+          data.data.category === "ofertas" ? null : (
+            <img
+              className="h-[178px] sm:h-[110px]  sm:right-6 relative right-10 w-full rounded-lg z-[1] object-cover"
+              src={`https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0f724175559299.64b9a559c7f3a.png`}
+              alt="imagen"
+            />
+          )}
+        </figure>
+        {/* <img 
                 className=" w-[30%]  object-cover "
                 src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/30a06d175559299.64b5fc960793a.jpg" alt="" />
                  */}
-         
-            <div className=" mt-2  flex flex-col  items-center">
-                <div className="flex flex-col text-start w-full">
-                   <p className="font-bold  text-black ">${data.data.price}</p>
-                   <span className=" text-blue-ligth text-[14px]">{data.data.category==="premium-hombre" || data.data.category === "premium-mujer" || data.data.category === "ofertas"?null:"inspirado en:"}</span>
-                   <h1 className='text-[17px] text-black font-bold pt-0 h-[42px]'>{data.data.name}</h1>
-                </div>
-               <AddButton id={data.data.id}
-                data={data.data}
-              
-                />
-
-<div className="flex mt-1 text-black">  
-       {data.data.quantity>0 ?   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>:<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-</svg>
-}
-       
-         <p className="text-[12px]   mt-1">stock: {data.data.quantity}</p>
+                   <div className="flex flex-col text-start w-full">
+            <p className="font-bold  text-black ">${data.data.price}</p>
+            <span className=" text-blue-ligth text-[14px]">
+              {data.data.category === "premium-hombre" ||
+              data.data.category === "premium-mujer" ||
+              data.data.category === "ofertas"
+                ? null
+                : "inspirado en:"}
+            </span>
+            <h1 className="text-[17px] text-black font-bold pt-0 h-auto">
+              {data.data.name}
+            </h1>
+          </div>
 </div>
+        <div className=" mt-2  flex flex-col   items-center">
+        
+            <AddButton id={data.data.id} data={data.data} />
 
+            <div className="flex mt-1 text-black">
+              {data.data.quantity > 0 ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                  />
+                </svg>
+              )}
+
+              <p className="text-[12px]   mt-1">stock: {data.data.quantity}</p>
             </div>
+         
         </div>
-
-    )
+      </div>
+    );
 }
 export default Card;

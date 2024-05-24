@@ -106,7 +106,7 @@ const NavBar = () => {
         <CheckOutSideMenu />
       </div>
 
-      <div className={`${isOpenMenu ? 'sm:flex  ' : 'sm:hidden'} sm:absolute sm:z-30 sm:left-0 sm:top-0 sm:w-[auto]  bg-white w-full mt-2 items-start `}>
+      <div className={`${isOpenMenu ? 'sm:flex  ' : 'sm:hidden'} sm:absolute sm:z-30 sm:left-0 sm:top-0 sm:w-[auto]  bg-white w-full mb-2 items-start `}>
         <ul className={`menu-desktop categories  flex px-20   text-[16px]  justify-start  
            sm:text-[1rem]   
            sm:text-start sm:px-0 sm:w-[60vw] sm:h-full  sm:fixed sm:top-0 sm:bg-white  sm:flex-col
@@ -129,7 +129,7 @@ const NavBar = () => {
 
             <details name="editar" className='  hover:bg-[#8CD8EF] w-full relative border-none open:z-30 items-center'>
               <summary  
-              className='cursor-pointer  h-full text-start flex items-center sm:p-3  text-[18px] font-medium  border-t'>Perfumes Premium</summary>
+              className='cursor-pointer  h-full text-start flex items-center sm:p-3  text-[18px] font-medium  sm:border-t'>Perfumes Premium</summary>
               <div className="absolute shadow-xl shadow-black sm:left-20 top-14 left-0 w-[220px] bg-white">
              <li className="p-0">
                  <NavLink
