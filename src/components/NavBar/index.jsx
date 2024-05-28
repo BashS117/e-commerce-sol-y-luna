@@ -115,7 +115,7 @@ const NavBar = () => {
 
 
 
-          <div className={`hidden relative sm:flex text-start text-[1.4rem] py-[10px] sm:w-full  bg-white font-bold mr-2 sm:px-4 `}>
+          <div className={`hidden text-black relative sm:flex text-start text-[1.4rem] py-[10px] sm:w-full  bg-white font-bold mr-2 sm:px-4 `}>
             <button
               className="sm:w-[40px] sm:h-[40px] sm:flex sm:absolute right-[-40px] top-0 rounded-tl-none  shadow-[inset_02px_-0px_02px_rgba(255,255,255,0.6)]  bg-black hidden "
               onClick={() => closeSideMenu()}
@@ -124,12 +124,15 @@ const NavBar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            Categorias</div>
+            Categorías</div>
 
 
-            <details name="editar" className='  hover:bg-[#8CD8EF] w-full relative border-none open:z-30 items-center'>
+            <details name="editar" className=' text-black hover:bg-[#8CD8EF] w-full relative border-none open:z-30 items-center'>
               <summary  
-              className='cursor-pointer  h-full text-start flex items-center sm:p-3  text-[18px] font-medium  sm:border-t'>Perfumes Premium</summary>
+              className='cursor-pointer sm:pl-4 gap-[2px] h-full text-start flex items-center sm:p-3  text-[18px] font-medium  sm:border-t'>
+                <img width="30" height="30" src="https://img.icons8.com/glyph-neue/64/perfume-bottle.png" alt="perfume-bottle"/>
+                Perfumes Premium
+                </summary>
               <div className="absolute shadow-xl shadow-black sm:left-20 top-14 left-0 w-[220px] bg-white">
              <li className="p-0">
                  <NavLink
@@ -156,7 +159,10 @@ const NavBar = () => {
 		V382H136V223.682h75V352c0,5.522,4.477,10,10,10c5.523,0,10-4.478,10-10V223.682h75V297c0,5.522,4.478,10,10,10s10-4.478,10-10
 		v-83.318c0-5.522-4.478-10-10-10h-85V132h35v41.682c0,5.523,4.478,10,10,10h70L346.002,422H96z"/>
 </g>
-</svg>                   <figcaption className="ml-4 text-black">Premium Hombre</figcaption>
+</svg>                  
+ <figcaption className="ml-4 text-black">
+  Premium Hombre
+  </figcaption>
                   </figure>           
                   
                    </NavLink>
