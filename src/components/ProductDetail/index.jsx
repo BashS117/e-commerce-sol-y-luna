@@ -137,7 +137,7 @@ onChange={handleVolumeChange}
   data={product}/>
    <Link to={`https://api.whatsapp.com/send?phone=573177400171&text=*¡Hola!*🤗%0AEstoy interesado en este producto: %0A ${product.name},  %0A *Precio:* $${product.price}, %0A *Categoría:* ${product.category}`}>
           <button
-             className='w-full border items-center justify-center flex border-[#25d366] py-2  hover:bg-[#25d366] hover:text-white '
+             className='w-full border items-center ask-product-by-whatsapp text-black justify-center flex border-[#25d366] py-2  hover:bg-[#25d366] hover:text-white '
              >
              Consultar producto por WhatsApp
              <img src="https://img.icons8.com/?size=34&id=QkXeKixybttw&format=png&color=000000" alt="" />
