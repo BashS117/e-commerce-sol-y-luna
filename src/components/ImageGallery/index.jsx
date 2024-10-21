@@ -22,7 +22,7 @@ const ImageGallery = ({ img, img2, img3,selectedVolume, productCategory }) => {
     ]
 
     return (
-        <div className=' w-[auto] bg-white relative flex m-auto  sm:w-auto   '>
+        <div className=' w-[auto] pt-[10px] bg-white relative flex m-auto  sm:w-auto   '>
             {productCategory === "premium-hombre"||productCategory === "premium-mujer"|| productCategory === "ofertas"?
             null:
             <div className='text-black absolute top-0 px-2 z-20 flex w-full justify-between'><p>Inspiración:</p> <p>Nuestra Fragancia:</p></div>
