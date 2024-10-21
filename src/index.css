@@ -115,8 +115,6 @@ select{
 .form-checkout input{
   border: 1px solid #c4baba;
   height: 35px;
-  
-
 }
 @media (prefers-color-scheme: light) {
   :root {

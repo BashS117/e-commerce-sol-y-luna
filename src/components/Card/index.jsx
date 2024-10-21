@@ -67,7 +67,7 @@ const Card = (data) => {
 
     return (
       <div
-        className=" mx-auto flex flex-col justify-between   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[18rem] sm:w-[11.5rem]  border border-ligth-gray p-3 "
+        className=" mx-auto flex flex-col justify-between   hover:shadow-xl hover:shadow-[#753569]   bg-[#fdf7ed] cursor-pointer w-[18rem] sm:w-[11.5rem]   p-3 "
         onClick={() => {
           navigate(`/productdetail/${data.data.id}`);
         }}

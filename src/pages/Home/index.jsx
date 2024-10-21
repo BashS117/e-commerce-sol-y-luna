@@ -239,7 +239,7 @@ useEffect(()=>{
           <div className='App text-center  w-full  '>
        
       
-      <h2 className='font-bold text-start pl-2 text-[20px]  border-b-2 border-b-purple'>Explora nuestros perfumes</h2>
+      <h2 className='font-bold text-center pl-2 text-[20px] '>Explora nuestros perfumes</h2>
 
 
           <div className='sm:grid-cols-2 grid gap-26 gap-y-5 mt-3 place-content-center grid-cols-4 '>

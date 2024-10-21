@@ -9,7 +9,7 @@ import { PerfumesContext } from '../../Context'
 const SettingsBar = () => {
 //get User form localstorage
   const user = JSON.parse(localStorage.getItem('users'));
-const {setSearchByCategory,openAcountSideMenu,closeAcountSideMenu,isAcountSideMenuOpen}=useContext(PerfumesContext)
+const {setSearchByTitle,setSearchByCategory,openAcountSideMenu,closeAcountSideMenu,isAcountSideMenuOpen}=useContext(PerfumesContext)
   const navigate = useNavigate()
 
     const activeStyle = 'relative left-1    font-bold text-orange'
@@ -42,7 +42,7 @@ const logout=()=>{
             onClick={() => {
               setSearchByTitle(null)
               setSearchByCategory(null)
-              closeSideMenu()
+              // closeSideMenu()
 
             }}
           >
@@ -94,7 +94,7 @@ const logout=()=>{
             onClick={() => {
               setSearchByTitle(null)
               setSearchByCategory(null)
-              closeSideMenu()
+              // closeSideMenu()
 
             }}
             >

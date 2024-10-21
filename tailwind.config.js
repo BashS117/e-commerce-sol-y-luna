@@ -11,7 +11,6 @@ export default {
     'black': '#042642',
     'purple': '#8338ec',
     'gray-footer': '#E5E0FF',
- 
   },
     screens: {
       'sm': {'min': '320px', 'max': '767px'},
